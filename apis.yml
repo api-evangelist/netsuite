@@ -83,7 +83,7 @@ common:
     url: https://www.netsuite.com/portal/platform/developer/suitecloud-developer-tools.shtml
   - type: SuiteTalk Platform
     url: https://www.netsuite.com/portal/platform/developer/suitetalk.shtml
-  - type: Sign Up
+  - type: SignUp
     url: https://www.netsuite.com/portal/forms/free-product-tour.shtml
 maintainers:
   - FN: Kin Lane
