@@ -75,6 +75,10 @@ apis:
       - type: Documentation
         url: https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/chapter_4618456517.html
 common:
+  - type: GitHubOrganization
+    url: https://github.com/netsuite
+  - type: LinkedIn
+    url: https://www.linkedin.com/company/netsuite
   - type: Website
     url: https://www.netsuite.com/
   - type: Documentation
