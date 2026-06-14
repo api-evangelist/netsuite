@@ -1,0 +1,1525 @@
+"""
+Oracle NetSuite GraphQL Schema
+Conceptual schema derived from the SuiteTalk REST Web Services API,
+REST Record API, SuiteAnalytics Connect, and SuiteQL query layer.
+Source: https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/book_1559132836.html
+"""
+
+# ─── Scalars ──────────────────────────────────────────────────────────────────
+
+scalar Date
+scalar DateTime
+scalar JSON
+
+# ─── Enums ────────────────────────────────────────────────────────────────────
+
+enum TransactionType {
+  INVOICE
+  BILL
+  SALES_ORDER
+  PURCHASE_ORDER
+  ESTIMATE
+  CREDIT_MEMO
+  VENDOR_CREDIT
+  CHECK
+  DEPOSIT
+  JOURNAL_ENTRY
+  ITEM_FULFILLMENT
+  ITEM_RECEIPT
+  WORK_ORDER
+}
+
+enum AccountType {
+  ACCOUNTS_PAYABLE
+  ACCOUNTS_RECEIVABLE
+  BANK
+  COST_OF_GOODS_SOLD
+  CREDIT_CARD
+  DEFERRED_EXPENSE
+  DEFERRED_REVENUE
+  EQUITY
+  EXPENSE
+  FIXED_ASSET
+  INCOME
+  LONG_TERM_LIABILITY
+  NON_POSTING
+  OTHER_ASSET
+  OTHER_CURRENT_ASSET
+  OTHER_CURRENT_LIABILITY
+  OTHER_EXPENSE
+  OTHER_INCOME
+  STATISTICAL
+  UNBILLED_RECEIVABLE
+}
+
+enum EntityType {
+  CUSTOMER
+  VENDOR
+  EMPLOYEE
+  CONTACT
+  PARTNER
+  OTHER_NAME
+}
+
+enum ScriptType {
+  CLIENT
+  USER_EVENT
+  SCHEDULED
+  SUITELET
+  RESTLET
+  PORTLET
+  WORKFLOW_ACTION
+  MAP_REDUCE
+  BUNDLE_INSTALLATION
+  MASS_UPDATE
+}
+
+enum WorkOrderStatus {
+  PLANNED
+  RELEASED
+  IN_PROCESS
+  COMPLETED
+  CANCELLED
+}
+
+enum RevenueRecognitionStatus {
+  PENDING
+  IN_PROGRESS
+  COMPLETED
+}
+
+# ─── Interfaces ───────────────────────────────────────────────────────────────
+
+interface Node {
+  id: ID!
+  internalId: String!
+  externalId: String
+}
+
+interface Transaction {
+  id: ID!
+  internalId: String!
+  tranDate: Date
+  tranId: String
+  entity: Entity
+  memo: String
+  status: String
+  currency: Currency
+  exchangeRate: Float
+  department: Department
+  location: Location
+  classification: Classification
+  subsidiary: Subsidiary
+  customFields: [CustomField]
+}
+
+# ─── Core Platform Types ───────────────────────────────────────────────────────
+
+"""
+Base entity representing any stakeholder in NetSuite (customer, vendor, employee, contact).
+"""
+type Entity implements Node {
+  id: ID!
+  internalId: String!
+  externalId: String
+  entityId: String
+  entityType: EntityType
+  companyName: String
+  firstName: String
+  lastName: String
+  email: String
+  phone: String
+  altPhone: String
+  fax: String
+  defaultAddress: String
+  isInactive: Boolean
+  subsidiary: Subsidiary
+  currency: Currency
+  customFields: [CustomField]
+}
+
+"""
+Customer record in NetSuite.
+"""
+type Customer implements Node {
+  id: ID!
+  internalId: String!
+  externalId: String
+  entityId: String
+  companyName: String
+  firstName: String
+  lastName: String
+  email: String
+  phone: String
+  altPhone: String
+  fax: String
+  defaultAddress: String
+  creditLimit: Float
+  balance: Float
+  daysOverdue: Int
+  isInactive: Boolean
+  isPerson: Boolean
+  status: String
+  salesRep: Employee
+  category: String
+  terms: PaymentTerm
+  subsidiary: Subsidiary
+  currency: Currency
+  priceLevel: PriceLevel
+  taxItem: TaxItem
+  department: Department
+  location: Location
+  contacts: [Contact]
+  transactions: [Transaction]
+  customFields: [CustomField]
+}
+
+"""
+Vendor record in NetSuite.
+"""
+type Vendor implements Node {
+  id: ID!
+  internalId: String!
+  externalId: String
+  entityId: String
+  companyName: String
+  firstName: String
+  lastName: String
+  email: String
+  phone: String
+  altPhone: String
+  fax: String
+  defaultAddress: String
+  creditLimit: Float
+  balance: Float
+  isInactive: Boolean
+  isPerson: Boolean
+  terms: PaymentTerm
+  subsidiary: Subsidiary
+  currency: Currency
+  taxItem: TaxItem
+  department: Department
+  location: Location
+  contacts: [Contact]
+  transactions: [Transaction]
+  customFields: [CustomField]
+}
+
+"""
+Employee record in NetSuite.
+"""
+type Employee implements Node {
+  id: ID!
+  internalId: String!
+  externalId: String
+  entityId: String
+  firstName: String
+  lastName: String
+  email: String
+  phone: String
+  mobilePhone: String
+  title: String
+  department: Department
+  location: Location
+  subsidiary: Subsidiary
+  supervisor: Employee
+  isInactive: Boolean
+  hireDate: Date
+  releaseDate: Date
+  role: Role
+  customFields: [CustomField]
+}
+
+"""
+Contact record in NetSuite, associated with a customer, vendor, or partner.
+"""
+type Contact implements Node {
+  id: ID!
+  internalId: String!
+  externalId: String
+  entityId: String
+  firstName: String
+  lastName: String
+  email: String
+  phone: String
+  mobilePhone: String
+  title: String
+  company: Entity
+  isInactive: Boolean
+  subsidiary: Subsidiary
+  customFields: [CustomField]
+}
+
+# ─── Financial Types ───────────────────────────────────────────────────────────
+
+"""
+Chart of accounts entry.
+"""
+type Account implements Node {
+  id: ID!
+  internalId: String!
+  externalId: String
+  acctNumber: String
+  acctName: String
+  acctType: AccountType
+  description: String
+  currency: Currency
+  parent: Account
+  subAccounts: [Account]
+  isInactive: Boolean
+  subsidiary: Subsidiary
+  department: Department
+  location: Location
+  classification: Classification
+  customFields: [CustomField]
+}
+
+"""
+Fiscal accounting period.
+"""
+type AccountingPeriod implements Node {
+  id: ID!
+  internalId: String!
+  externalId: String
+  periodName: String
+  startDate: Date
+  endDate: Date
+  isClosed: Boolean
+  isLocked: Boolean
+  isQuarter: Boolean
+  isYear: Boolean
+  parent: AccountingPeriod
+  fiscalCalendar: String
+}
+
+"""
+Journal entry header.
+"""
+type JournalEntry implements Node & Transaction {
+  id: ID!
+  internalId: String!
+  externalId: String
+  tranDate: Date
+  tranId: String
+  entity: Entity
+  memo: String
+  status: String
+  currency: Currency
+  exchangeRate: Float
+  department: Department
+  location: Location
+  classification: Classification
+  subsidiary: Subsidiary
+  accountingPeriod: AccountingPeriod
+  isReversal: Boolean
+  reversalDate: Date
+  lines: [JournalLine]
+  customFields: [CustomField]
+}
+
+"""
+Individual debit or credit line on a journal entry.
+"""
+type JournalLine {
+  id: ID!
+  lineId: Int
+  account: Account
+  debit: Float
+  credit: Float
+  memo: String
+  entity: Entity
+  department: Department
+  location: Location
+  classification: Classification
+  customFields: [CustomField]
+}
+
+"""
+Currency definition.
+"""
+type Currency implements Node {
+  id: ID!
+  internalId: String!
+  externalId: String
+  name: String
+  symbol: String
+  exchangeRate: Float
+  currencyPrecision: Int
+  isInactive: Boolean
+  isBaseCurrency: Boolean
+}
+
+"""
+Exchange rate between two currencies for a given period.
+"""
+type ExchangeRate {
+  id: ID!
+  fromCurrency: Currency
+  toCurrency: Currency
+  exchangeRate: Float
+  effectiveDate: Date
+}
+
+"""
+Revenue recognition schedule.
+"""
+type RevenueRecognition implements Node {
+  id: ID!
+  internalId: String!
+  externalId: String
+  revenueElement: String
+  startDate: Date
+  endDate: Date
+  recognitionStatus: RevenueRecognitionStatus
+  totalAmount: Float
+  recognizedAmount: Float
+  deferredAmount: Float
+  revenueArrangement: String
+  revenueRecognitionRule: String
+  subsidiary: Subsidiary
+  customFields: [CustomField]
+}
+
+"""
+Advanced billing schedule attached to a subscription or project.
+"""
+type AdvancedBilling implements Node {
+  id: ID!
+  internalId: String!
+  externalId: String
+  customer: Customer
+  startDate: Date
+  endDate: Date
+  billingSchedule: String
+  frequency: String
+  nextBillingDate: Date
+  totalAmount: Float
+  customFields: [CustomField]
+}
+
+"""
+Contract header (subscription or service agreement).
+"""
+type Contract implements Node {
+  id: ID!
+  internalId: String!
+  externalId: String
+  contractNumber: String
+  customer: Customer
+  startDate: Date
+  endDate: Date
+  status: String
+  totalValue: Float
+  billingSchedule: String
+  lines: [ContractLine]
+  revenueRecognition: RevenueRecognition
+  subsidiary: Subsidiary
+  customFields: [CustomField]
+}
+
+"""
+Line item on a contract.
+"""
+type ContractLine {
+  id: ID!
+  lineId: Int
+  item: InventoryItem
+  quantity: Float
+  rate: Float
+  amount: Float
+  startDate: Date
+  endDate: Date
+  revenueRecognitionRule: String
+}
+
+"""
+Revenue line associated with a transaction or contract.
+"""
+type Revenue implements Node {
+  id: ID!
+  internalId: String!
+  externalId: String
+  transaction: Transaction
+  account: Account
+  amount: Float
+  recognitionDate: Date
+  subsidiary: Subsidiary
+}
+
+# ─── Transaction Types ─────────────────────────────────────────────────────────
+
+"""
+Customer invoice.
+"""
+type Invoice implements Node & Transaction {
+  id: ID!
+  internalId: String!
+  externalId: String
+  tranDate: Date
+  tranId: String
+  entity: Entity
+  customer: Customer
+  memo: String
+  status: String
+  currency: Currency
+  exchangeRate: Float
+  department: Department
+  location: Location
+  classification: Classification
+  subsidiary: Subsidiary
+  dueDate: Date
+  amountDue: Float
+  amountPaid: Float
+  total: Float
+  terms: PaymentTerm
+  salesRep: Employee
+  lines: [TransactionLine]
+  customFields: [CustomField]
+}
+
+"""
+Vendor bill (accounts payable).
+"""
+type Bill implements Node & Transaction {
+  id: ID!
+  internalId: String!
+  externalId: String
+  tranDate: Date
+  tranId: String
+  entity: Entity
+  vendor: Vendor
+  memo: String
+  status: String
+  currency: Currency
+  exchangeRate: Float
+  department: Department
+  location: Location
+  classification: Classification
+  subsidiary: Subsidiary
+  dueDate: Date
+  amountDue: Float
+  amountPaid: Float
+  total: Float
+  terms: PaymentTerm
+  lines: [TransactionLine]
+  customFields: [CustomField]
+}
+
+"""
+Purchase order sent to a vendor.
+"""
+type PurchaseOrder implements Node & Transaction {
+  id: ID!
+  internalId: String!
+  externalId: String
+  tranDate: Date
+  tranId: String
+  entity: Entity
+  vendor: Vendor
+  memo: String
+  status: String
+  currency: Currency
+  exchangeRate: Float
+  department: Department
+  location: Location
+  classification: Classification
+  subsidiary: Subsidiary
+  expectedReceiptDate: Date
+  total: Float
+  terms: PaymentTerm
+  lines: [TransactionLine]
+  itemReceipts: [ItemReceipt]
+  bills: [Bill]
+  customFields: [CustomField]
+}
+
+"""
+Sales order from a customer.
+"""
+type SalesOrder implements Node & Transaction {
+  id: ID!
+  internalId: String!
+  externalId: String
+  tranDate: Date
+  tranId: String
+  entity: Entity
+  customer: Customer
+  memo: String
+  status: String
+  currency: Currency
+  exchangeRate: Float
+  department: Department
+  location: Location
+  classification: Classification
+  subsidiary: Subsidiary
+  shipDate: Date
+  total: Float
+  terms: PaymentTerm
+  salesRep: Employee
+  lines: [TransactionLine]
+  fulfillments: [ItemFulfillment]
+  invoices: [Invoice]
+  customFields: [CustomField]
+}
+
+"""
+Sales estimate / quote for a customer.
+"""
+type Estimate implements Node & Transaction {
+  id: ID!
+  internalId: String!
+  externalId: String
+  tranDate: Date
+  tranId: String
+  entity: Entity
+  customer: Customer
+  memo: String
+  status: String
+  currency: Currency
+  exchangeRate: Float
+  department: Department
+  location: Location
+  classification: Classification
+  subsidiary: Subsidiary
+  expirationDate: Date
+  total: Float
+  probability: Float
+  salesRep: Employee
+  lines: [TransactionLine]
+  customFields: [CustomField]
+}
+
+"""
+Credit memo issued to a customer.
+"""
+type CreditMemo implements Node & Transaction {
+  id: ID!
+  internalId: String!
+  externalId: String
+  tranDate: Date
+  tranId: String
+  entity: Entity
+  customer: Customer
+  memo: String
+  status: String
+  currency: Currency
+  exchangeRate: Float
+  department: Department
+  location: Location
+  classification: Classification
+  subsidiary: Subsidiary
+  total: Float
+  amountRemaining: Float
+  lines: [TransactionLine]
+  customFields: [CustomField]
+}
+
+"""
+Vendor credit received from a vendor.
+"""
+type VendorCredit implements Node & Transaction {
+  id: ID!
+  internalId: String!
+  externalId: String
+  tranDate: Date
+  tranId: String
+  entity: Entity
+  vendor: Vendor
+  memo: String
+  status: String
+  currency: Currency
+  exchangeRate: Float
+  department: Department
+  location: Location
+  classification: Classification
+  subsidiary: Subsidiary
+  total: Float
+  amountRemaining: Float
+  lines: [TransactionLine]
+  customFields: [CustomField]
+}
+
+"""
+Check payment to a vendor or other payee.
+"""
+type Check implements Node & Transaction {
+  id: ID!
+  internalId: String!
+  externalId: String
+  tranDate: Date
+  tranId: String
+  entity: Entity
+  memo: String
+  status: String
+  currency: Currency
+  exchangeRate: Float
+  department: Department
+  location: Location
+  classification: Classification
+  subsidiary: Subsidiary
+  checkNumber: String
+  account: Account
+  total: Float
+  payee: Entity
+  lines: [TransactionLine]
+  customFields: [CustomField]
+}
+
+"""
+Bank deposit transaction.
+"""
+type Deposit implements Node & Transaction {
+  id: ID!
+  internalId: String!
+  externalId: String
+  tranDate: Date
+  tranId: String
+  entity: Entity
+  memo: String
+  status: String
+  currency: Currency
+  exchangeRate: Float
+  department: Department
+  location: Location
+  classification: Classification
+  subsidiary: Subsidiary
+  account: Account
+  total: Float
+  lines: [TransactionLine]
+  customFields: [CustomField]
+}
+
+"""
+Generic transaction line item used across multiple transaction types.
+"""
+type TransactionLine {
+  id: ID!
+  lineId: Int
+  item: InventoryItem
+  quantity: Float
+  rate: Float
+  amount: Float
+  description: String
+  department: Department
+  location: Location
+  classification: Classification
+  taxCode: TaxCode
+  customFields: [CustomField]
+}
+
+# ─── Inventory and Supply Chain ────────────────────────────────────────────────
+
+"""
+Inventory item (product or service).
+"""
+type InventoryItem implements Node {
+  id: ID!
+  internalId: String!
+  externalId: String
+  itemId: String
+  displayName: String
+  description: String
+  itemType: String
+  upcCode: String
+  isInactive: Boolean
+  isTaxable: Boolean
+  cost: Float
+  salesPrice: Float
+  quantityOnHand: Float
+  quantityOnOrder: Float
+  quantityAvailable: Float
+  reorderPoint: Float
+  preferredStockLevel: Float
+  purchaseUnit: String
+  saleUnit: String
+  stockUnit: String
+  incomeAccount: Account
+  cogsAccount: Account
+  assetAccount: Account
+  taxSchedule: TaxCode
+  priceLevel: PriceLevel
+  department: Department
+  location: Location
+  subsidiary: Subsidiary
+  inventoryDetail: [InventoryDetail]
+  bomComponents: [BOMComponent]
+  customFields: [CustomField]
+}
+
+"""
+Inventory quantity at a specific location/bin.
+"""
+type InventoryDetail {
+  id: ID!
+  item: InventoryItem
+  location: InventoryLocation
+  lotNumber: String
+  serialNumber: String
+  expirationDate: Date
+  quantityOnHand: Float
+  quantityAvailable: Float
+  quantityOnOrder: Float
+  quantityCommitted: Float
+}
+
+"""
+Physical or virtual inventory location (warehouse, bin, etc.).
+"""
+type InventoryLocation implements Node {
+  id: ID!
+  internalId: String!
+  externalId: String
+  name: String
+  isInactive: Boolean
+  parent: InventoryLocation
+  subsidiary: Subsidiary
+  includeChildren: Boolean
+}
+
+"""
+Inventory (current snapshot across all items and locations).
+"""
+type Inventory {
+  id: ID!
+  item: InventoryItem
+  location: InventoryLocation
+  quantityOnHand: Float
+  quantityAvailable: Float
+  quantityOnOrder: Float
+  quantityCommitted: Float
+  averageCost: Float
+  lastPurchasePrice: Float
+}
+
+"""
+Item fulfillment — shipping items against a sales order.
+"""
+type ItemFulfillment implements Node & Transaction {
+  id: ID!
+  internalId: String!
+  externalId: String
+  tranDate: Date
+  tranId: String
+  entity: Entity
+  memo: String
+  status: String
+  currency: Currency
+  exchangeRate: Float
+  department: Department
+  location: Location
+  classification: Classification
+  subsidiary: Subsidiary
+  salesOrder: SalesOrder
+  shipDate: Date
+  shipMethod: String
+  trackingNumbers: [String]
+  lines: [TransactionLine]
+  customFields: [CustomField]
+}
+
+"""
+Item receipt — receiving items against a purchase order.
+"""
+type ItemReceipt implements Node & Transaction {
+  id: ID!
+  internalId: String!
+  externalId: String
+  tranDate: Date
+  tranId: String
+  entity: Entity
+  memo: String
+  status: String
+  currency: Currency
+  exchangeRate: Float
+  department: Department
+  location: Location
+  classification: Classification
+  subsidiary: Subsidiary
+  purchaseOrder: PurchaseOrder
+  lines: [TransactionLine]
+  customFields: [CustomField]
+}
+
+# ─── Manufacturing ─────────────────────────────────────────────────────────────
+
+"""
+Work order for manufacturing or assembly.
+"""
+type WorkOrder implements Node & Transaction {
+  id: ID!
+  internalId: String!
+  externalId: String
+  tranDate: Date
+  tranId: String
+  entity: Entity
+  memo: String
+  status: WorkOrderStatus
+  currency: Currency
+  exchangeRate: Float
+  department: Department
+  location: Location
+  classification: Classification
+  subsidiary: Subsidiary
+  assemblyItem: InventoryItem
+  quantity: Float
+  startDate: Date
+  endDate: Date
+  bom: BOM
+  bomRevision: BOMRevision
+  completions: [WorkOrderCompletion]
+  customFields: [CustomField]
+}
+
+"""
+Completion record for a work order (partial or full build completion).
+"""
+type WorkOrderCompletion implements Node {
+  id: ID!
+  internalId: String!
+  externalId: String
+  workOrder: WorkOrder
+  completionDate: Date
+  quantityCompleted: Float
+  location: Location
+  customFields: [CustomField]
+}
+
+"""
+Bill of Materials (top-level header).
+"""
+type BOM implements Node {
+  id: ID!
+  internalId: String!
+  externalId: String
+  name: String
+  isInactive: Boolean
+  memo: String
+  restrictToAssemblyItem: InventoryItem
+  useComponentYield: Boolean
+  revisions: [BOMRevision]
+  customFields: [CustomField]
+}
+
+"""
+Versioned revision of a bill of materials.
+"""
+type BOMRevision implements Node {
+  id: ID!
+  internalId: String!
+  externalId: String
+  bom: BOM
+  revisionName: String
+  effectiveStartDate: Date
+  effectiveEndDate: Date
+  memo: String
+  components: [BOMComponent]
+  customFields: [CustomField]
+}
+
+"""
+Component line within a BOM revision.
+"""
+type BOMComponent {
+  id: ID!
+  bomRevision: BOMRevision
+  item: InventoryItem
+  quantity: Float
+  units: String
+  description: String
+  itemSource: String
+}
+
+# ─── Pricing and Tax ───────────────────────────────────────────────────────────
+
+"""
+Pricing group — groups of customers that share a pricing tier.
+"""
+type PricingGroup implements Node {
+  id: ID!
+  internalId: String!
+  externalId: String
+  name: String
+  isInactive: Boolean
+}
+
+"""
+Price level (e.g., Base Price, Wholesale, MSRP).
+"""
+type PriceLevel implements Node {
+  id: ID!
+  internalId: String!
+  externalId: String
+  name: String
+  discountPercent: Float
+  isOnline: Boolean
+  isInactive: Boolean
+}
+
+"""
+Tax item associated with a product or service.
+"""
+type TaxItem implements Node {
+  id: ID!
+  internalId: String!
+  externalId: String
+  itemId: String
+  description: String
+  taxRate: Float
+  taxType: String
+  taxCode: TaxCode
+  isInactive: Boolean
+  subsidiary: Subsidiary
+}
+
+"""
+Tax code used on transaction lines.
+"""
+type TaxCode implements Node {
+  id: ID!
+  internalId: String!
+  externalId: String
+  name: String
+  description: String
+  taxRate: Float
+  taxType: String
+  country: String
+  isInactive: Boolean
+  taxGroup: TaxGroup
+  subsidiary: Subsidiary
+}
+
+"""
+Tax group (collection of tax codes applied together).
+"""
+type TaxGroup implements Node {
+  id: ID!
+  internalId: String!
+  externalId: String
+  taxName: String
+  description: String
+  taxCodes: [TaxCode]
+  taxRate: Float
+  country: String
+  isInactive: Boolean
+  subsidiary: Subsidiary
+}
+
+"""
+Payment terms (e.g., Net 30, 2/10 Net 30).
+"""
+type PaymentTerm implements Node {
+  id: ID!
+  internalId: String!
+  externalId: String
+  name: String
+  daysUntilDue: Int
+  discountPercent: Float
+  discountDays: Int
+  dayOfMonthDue: Int
+  percentageBalance: Float
+  isInactive: Boolean
+}
+
+"""
+Payment method (cash, check, credit card, ACH, etc.).
+"""
+type PaymentMethod implements Node {
+  id: ID!
+  internalId: String!
+  externalId: String
+  name: String
+  isInactive: Boolean
+  isOnline: Boolean
+  creditCard: Boolean
+  payPalEmailAddress: String
+}
+
+"""
+Sales/revenue term used on contracts.
+"""
+type Term implements Node {
+  id: ID!
+  internalId: String!
+  externalId: String
+  name: String
+  description: String
+  isInactive: Boolean
+}
+
+# ─── Organizational Structure ──────────────────────────────────────────────────
+
+"""
+Department organizational unit.
+"""
+type Department implements Node {
+  id: ID!
+  internalId: String!
+  externalId: String
+  name: String
+  fullName: String
+  isInactive: Boolean
+  parent: Department
+  children: [Department]
+  subsidiary: Subsidiary
+}
+
+"""
+Physical or logical location (office, warehouse, store).
+"""
+type Location implements Node {
+  id: ID!
+  internalId: String!
+  externalId: String
+  name: String
+  fullName: String
+  isInactive: Boolean
+  parent: Location
+  children: [Location]
+  subsidiary: Subsidiary
+  address: String
+}
+
+"""
+Classification (custom segmentation dimension, e.g., business line or cost center).
+"""
+type Classification implements Node {
+  id: ID!
+  internalId: String!
+  externalId: String
+  name: String
+  fullName: String
+  isInactive: Boolean
+  parent: Classification
+  children: [Classification]
+  subsidiary: Subsidiary
+}
+
+"""
+Subsidiary company within a OneWorld account.
+"""
+type Subsidiary implements Node {
+  id: ID!
+  internalId: String!
+  externalId: String
+  name: String
+  fullName: String
+  legalName: String
+  isInactive: Boolean
+  isElimination: Boolean
+  currency: Currency
+  parent: Subsidiary
+  children: [Subsidiary]
+  country: String
+  state: String
+  taxRegistrationNumber: String
+}
+
+# ─── Project Management ────────────────────────────────────────────────────────
+
+"""
+Project (job) record in NetSuite Project Management.
+"""
+type Project implements Node {
+  id: ID!
+  internalId: String!
+  externalId: String
+  projectName: String
+  projectId: String
+  status: String
+  startDate: Date
+  endDate: Date
+  customer: Customer
+  projectManager: Employee
+  estimatedCost: Float
+  estimatedRevenue: Float
+  actualCost: Float
+  actualRevenue: Float
+  percentComplete: Float
+  isInactive: Boolean
+  subsidiary: Subsidiary
+  department: Department
+  location: Location
+  customFields: [CustomField]
+}
+
+# ─── Platform / Customization ──────────────────────────────────────────────────
+
+"""
+Custom record instance (SuiteBuilder custom record type).
+"""
+type CustomRecord implements Node {
+  id: ID!
+  internalId: String!
+  externalId: String
+  recordType: RecordType
+  name: String
+  isInactive: Boolean
+  customFields: [CustomField]
+}
+
+"""
+Record type definition for custom records.
+"""
+type RecordType implements Node {
+  id: ID!
+  internalId: String!
+  externalId: String
+  name: String
+  scriptId: String
+  isOrdered: Boolean
+  allowNumbering: Boolean
+  showLastModified: Boolean
+  isAvailableOffline: Boolean
+  customFields: [CustomField]
+}
+
+"""
+Custom field definition attached to a record type.
+"""
+type CustomField implements Node {
+  id: ID!
+  internalId: String!
+  externalId: String
+  fieldId: String
+  label: String
+  fieldType: String
+  defaultValue: String
+  isMandatory: Boolean
+  isSearchable: Boolean
+  appliesToRecord: [String]
+  value: JSON
+}
+
+"""
+Saved search definition.
+"""
+type SavedSearch implements Node {
+  id: ID!
+  internalId: String!
+  externalId: String
+  searchId: String
+  title: String
+  searchType: String
+  isPublic: Boolean
+  owner: Employee
+  definition: JSON
+}
+
+"""
+Search definition (runtime search parameters).
+"""
+type SearchDefinition {
+  id: ID!
+  searchType: String
+  columns: [String]
+  filters: JSON
+  returnSearchColumns: Boolean
+}
+
+"""
+Report definition in SuiteAnalytics.
+"""
+type ReportDefinition implements Node {
+  id: ID!
+  internalId: String!
+  externalId: String
+  reportId: String
+  title: String
+  reportType: String
+  layout: JSON
+  isPublic: Boolean
+  owner: Employee
+}
+
+"""
+Role definition controlling record-level access.
+"""
+type Role implements Node {
+  id: ID!
+  internalId: String!
+  externalId: String
+  name: String
+  isInactive: Boolean
+  isReadOnly: Boolean
+  centerType: String
+  permissions: [Permission]
+  subsidiary: Subsidiary
+}
+
+"""
+Permission entry within a role.
+"""
+type Permission {
+  id: ID!
+  feature: String
+  permissionLevel: String
+  restriction: String
+}
+
+"""
+SuiteScript script record.
+"""
+type Script implements Node {
+  id: ID!
+  internalId: String!
+  externalId: String
+  name: String
+  scriptId: String
+  scriptType: ScriptType
+  description: String
+  scriptFile: String
+  apiVersion: String
+  owner: Employee
+  isInactive: Boolean
+  deployments: [ScriptDeployment]
+  customFields: [CustomField]
+}
+
+"""
+Deployment of a SuiteScript to a specific record type or schedule.
+"""
+type ScriptDeployment implements Node {
+  id: ID!
+  internalId: String!
+  externalId: String
+  script: Script
+  deploymentId: String
+  status: String
+  isDeployed: Boolean
+  executeAs: Employee
+  recordType: String
+  eventType: String
+  runAsRole: Role
+  logLevel: String
+  customFields: [CustomField]
+}
+
+"""
+SuiteFlow workflow definition.
+"""
+type WorkflowDefinition implements Node {
+  id: ID!
+  internalId: String!
+  externalId: String
+  name: String
+  scriptId: String
+  recordType: RecordType
+  isOrdered: Boolean
+  releaseStatus: String
+  initCondition: String
+  owner: Employee
+  isInactive: Boolean
+  customFields: [CustomField]
+}
+
+"""
+External integration record (OAuth 2.0 / Token-Based Auth client).
+"""
+type Integration implements Node {
+  id: ID!
+  internalId: String!
+  externalId: String
+  name: String
+  state: String
+  authorizationCodeGrant: Boolean
+  scopeGetAll: Boolean
+  scopeRestWebServices: Boolean
+  scopeSuiteAnalytics: Boolean
+  isInactive: Boolean
+  owner: Employee
+}
+
+# ─── Query Root ───────────────────────────────────────────────────────────────
+
+type Query {
+  # Entities
+  customer(id: ID!): Customer
+  customers(limit: Int, offset: Int, query: String): [Customer]
+
+  vendor(id: ID!): Vendor
+  vendors(limit: Int, offset: Int, query: String): [Vendor]
+
+  employee(id: ID!): Employee
+  employees(limit: Int, offset: Int, query: String): [Employee]
+
+  contact(id: ID!): Contact
+  contacts(limit: Int, offset: Int, query: String): [Contact]
+
+  # Financial
+  account(id: ID!): Account
+  accounts(limit: Int, offset: Int, acctType: AccountType): [Account]
+
+  accountingPeriod(id: ID!): AccountingPeriod
+  accountingPeriods(limit: Int, offset: Int): [AccountingPeriod]
+
+  journalEntry(id: ID!): JournalEntry
+  journalEntries(limit: Int, offset: Int, startDate: Date, endDate: Date): [JournalEntry]
+
+  currency(id: ID!): Currency
+  currencies: [Currency]
+
+  exchangeRate(fromCurrencyId: ID!, toCurrencyId: ID!, date: Date): ExchangeRate
+
+  contract(id: ID!): Contract
+  contracts(limit: Int, offset: Int, customerId: ID): [Contract]
+
+  revenueRecognition(id: ID!): RevenueRecognition
+  revenueRecognitions(limit: Int, offset: Int): [RevenueRecognition]
+
+  # Transactions
+  invoice(id: ID!): Invoice
+  invoices(limit: Int, offset: Int, customerId: ID, startDate: Date, endDate: Date): [Invoice]
+
+  bill(id: ID!): Bill
+  bills(limit: Int, offset: Int, vendorId: ID, startDate: Date, endDate: Date): [Bill]
+
+  purchaseOrder(id: ID!): PurchaseOrder
+  purchaseOrders(limit: Int, offset: Int, vendorId: ID, status: String): [PurchaseOrder]
+
+  salesOrder(id: ID!): SalesOrder
+  salesOrders(limit: Int, offset: Int, customerId: ID, status: String): [SalesOrder]
+
+  estimate(id: ID!): Estimate
+  estimates(limit: Int, offset: Int, customerId: ID): [Estimate]
+
+  creditMemo(id: ID!): CreditMemo
+  creditMemos(limit: Int, offset: Int, customerId: ID): [CreditMemo]
+
+  vendorCredit(id: ID!): VendorCredit
+  vendorCredits(limit: Int, offset: Int, vendorId: ID): [VendorCredit]
+
+  check(id: ID!): Check
+  checks(limit: Int, offset: Int, startDate: Date, endDate: Date): [Check]
+
+  deposit(id: ID!): Deposit
+  deposits(limit: Int, offset: Int, startDate: Date, endDate: Date): [Deposit]
+
+  # Inventory
+  inventoryItem(id: ID!): InventoryItem
+  inventoryItems(limit: Int, offset: Int, query: String): [InventoryItem]
+
+  inventory(itemId: ID, locationId: ID): [Inventory]
+
+  inventoryLocation(id: ID!): InventoryLocation
+  inventoryLocations: [InventoryLocation]
+
+  itemFulfillment(id: ID!): ItemFulfillment
+  itemFulfillments(limit: Int, offset: Int, salesOrderId: ID): [ItemFulfillment]
+
+  itemReceipt(id: ID!): ItemReceipt
+  itemReceipts(limit: Int, offset: Int, purchaseOrderId: ID): [ItemReceipt]
+
+  # Manufacturing
+  workOrder(id: ID!): WorkOrder
+  workOrders(limit: Int, offset: Int, status: WorkOrderStatus): [WorkOrder]
+
+  bom(id: ID!): BOM
+  boms(limit: Int, offset: Int): [BOM]
+
+  # Pricing and Tax
+  priceLevel(id: ID!): PriceLevel
+  priceLevels: [PriceLevel]
+
+  pricingGroup(id: ID!): PricingGroup
+  pricingGroups: [PricingGroup]
+
+  taxCode(id: ID!): TaxCode
+  taxCodes(limit: Int, offset: Int): [TaxCode]
+
+  taxGroup(id: ID!): TaxGroup
+  taxGroups: [TaxGroup]
+
+  paymentTerm(id: ID!): PaymentTerm
+  paymentTerms: [PaymentTerm]
+
+  paymentMethod(id: ID!): PaymentMethod
+  paymentMethods: [PaymentMethod]
+
+  # Org Structure
+  department(id: ID!): Department
+  departments: [Department]
+
+  location(id: ID!): Location
+  locations: [Location]
+
+  classification(id: ID!): Classification
+  classifications: [Classification]
+
+  subsidiary(id: ID!): Subsidiary
+  subsidiaries: [Subsidiary]
+
+  project(id: ID!): Project
+  projects(limit: Int, offset: Int, customerId: ID): [Project]
+
+  # Platform
+  customRecord(id: ID!, recordTypeId: ID!): CustomRecord
+  customRecords(recordTypeId: ID!, limit: Int, offset: Int): [CustomRecord]
+
+  recordType(id: ID!): RecordType
+  recordTypes: [RecordType]
+
+  savedSearch(id: ID!): SavedSearch
+  savedSearches(searchType: String): [SavedSearch]
+
+  reportDefinition(id: ID!): ReportDefinition
+  reportDefinitions: [ReportDefinition]
+
+  role(id: ID!): Role
+  roles: [Role]
+
+  script(id: ID!): Script
+  scripts(scriptType: ScriptType): [Script]
+
+  integration(id: ID!): Integration
+  integrations: [Integration]
+
+  workflowDefinition(id: ID!): WorkflowDefinition
+  workflowDefinitions: [WorkflowDefinition]
+
+  # SuiteQL pass-through
+  suiteQL(query: String!, limit: Int, offset: Int): JSON
+}
+
+# ─── Mutation Root ─────────────────────────────────────────────────────────────
+
+type Mutation {
+  createCustomer(input: JSON!): Customer
+  updateCustomer(id: ID!, input: JSON!): Customer
+  deleteCustomer(id: ID!): Boolean
+
+  createVendor(input: JSON!): Vendor
+  updateVendor(id: ID!, input: JSON!): Vendor
+  deleteVendor(id: ID!): Boolean
+
+  createEmployee(input: JSON!): Employee
+  updateEmployee(id: ID!, input: JSON!): Employee
+
+  createContact(input: JSON!): Contact
+  updateContact(id: ID!, input: JSON!): Contact
+  deleteContact(id: ID!): Boolean
+
+  createInvoice(input: JSON!): Invoice
+  updateInvoice(id: ID!, input: JSON!): Invoice
+
+  createBill(input: JSON!): Bill
+  updateBill(id: ID!, input: JSON!): Bill
+
+  createPurchaseOrder(input: JSON!): PurchaseOrder
+  updatePurchaseOrder(id: ID!, input: JSON!): PurchaseOrder
+
+  createSalesOrder(input: JSON!): SalesOrder
+  updateSalesOrder(id: ID!, input: JSON!): SalesOrder
+
+  createJournalEntry(input: JSON!): JournalEntry
+  updateJournalEntry(id: ID!, input: JSON!): JournalEntry
+
+  createInventoryItem(input: JSON!): InventoryItem
+  updateInventoryItem(id: ID!, input: JSON!): InventoryItem
+
+  createWorkOrder(input: JSON!): WorkOrder
+  updateWorkOrder(id: ID!, input: JSON!): WorkOrder
+
+  createCustomRecord(recordTypeId: ID!, input: JSON!): CustomRecord
+  updateCustomRecord(id: ID!, recordTypeId: ID!, input: JSON!): CustomRecord
+  deleteCustomRecord(id: ID!, recordTypeId: ID!): Boolean
+}

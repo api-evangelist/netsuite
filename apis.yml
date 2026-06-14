@@ -1,94 +1,92 @@
 aid: netsuite
 name: Oracle NetSuite
-description: >-
-  Oracle NetSuite is a cloud-based business management suite that combines
-  ERP, financials, CRM, inventory, supply chain, ecommerce, and human capital
-  management into a single platform for mid-market and enterprise companies.
-  NetSuite's SuiteCloud platform exposes both REST web services (SuiteTalk
-  REST, with OpenAPI 3.0 metadata, SuiteQL queries, and CRUD on standard and
-  custom records) and SOAP web services (SuiteTalk SOAP), plus the RESTlets
-  framework for exposing custom server-side SuiteScript as REST endpoints.
+description: Oracle NetSuite is a cloud-based business management suite that combines
+  ERP, financials, CRM, inventory, supply chain, ecommerce, and human capital management
+  into a single platform for mid-market and enterprise companies. NetSuite's SuiteCloud
+  platform exposes both REST web services (SuiteTalk REST, with OpenAPI 3.0 metadata,
+  SuiteQL queries, and CRUD on standard and custom records) and SOAP web services
+  (SuiteTalk SOAP), plus the RESTlets framework for exposing custom server-side SuiteScript
+  as REST endpoints.
 type: Index
 image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 tags:
-  - ERP
-  - CRM
-  - Financials
-  - Accounting
-  - Inventory
-  - Ecommerce
-  - Business Management
-  - Cloud ERP
+- ERP
+- CRM
+- Financials
+- Accounting
+- Inventory
+- Ecommerce
+- Business Management
+- Cloud ERP
 url: https://raw.githubusercontent.com/api-evangelist/netsuite/refs/heads/main/apis.yml
 created: '2026-05-11'
 modified: '2026-05-11'
 specificationVersion: '0.19'
 apis:
-  - aid: netsuite:suitetalk-rest
-    name: NetSuite SuiteTalk REST Web Services
-    description: >-
-      REST-based interface to NetSuite business objects as JSON resources with
-      CRUD operations, SuiteQL high-performance queries, and an OpenAPI 3.0
-      definition that provides rich object metadata for records and metadata.
-    humanURL: https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/book_1559132836.html
-    baseURL: https://{accountid}.suitetalk.api.netsuite.com/services/rest
-    tags:
-      - REST
-      - SuiteQL
-      - Records
-      - Metadata
-    properties:
-      - type: Documentation
-        url: https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/book_1559132836.html
-      - type: Overview
-        url: https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/chapter_1540391670.html
-      - type: API Browser
-        url: https://system.netsuite.com/help/helpcenter/en_US/APIs/REST_API_Browser/record/v1/2023.1/index.html
-  - aid: netsuite:suitetalk-soap
-    name: NetSuite SuiteTalk SOAP Web Services
-    description: >-
-      Long-standing SOAP-based integration API to NetSuite records and
-      business logic, suitable for bulk operations, custom records, and
-      legacy ERP integration scenarios.
-    humanURL: https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/book_1495296234.html
-    baseURL: https://{accountid}.suitetalk.api.netsuite.com/services/NetSuitePort_{version}
-    tags:
-      - SOAP
-      - Web Services
-      - ERP
-    properties:
-      - type: Documentation
-        url: https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/book_1495296234.html
-  - aid: netsuite:restlets
-    name: NetSuite RESTlets
-    description: >-
-      Framework for exposing custom server-side SuiteScript as REST endpoints
-      hosted in NetSuite, enabling tailored integrations and custom business
-      logic over HTTP.
-    humanURL: https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/chapter_4618456517.html
-    baseURL: https://{accountid}.restlets.api.netsuite.com/app/site/hosting/restlet.nl
-    tags:
-      - RESTlet
-      - SuiteScript
-      - Custom Endpoints
-    properties:
-      - type: Documentation
-        url: https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/chapter_4618456517.html
-common:
-  - type: GitHubOrganization
-    url: https://github.com/netsuite
-  - type: LinkedIn
-    url: https://www.linkedin.com/company/netsuite
-  - type: Website
-    url: https://www.netsuite.com/
+- aid: netsuite:suitetalk-rest
+  name: NetSuite SuiteTalk REST Web Services
+  description: REST-based interface to NetSuite business objects as JSON resources
+    with CRUD operations, SuiteQL high-performance queries, and an OpenAPI 3.0 definition
+    that provides rich object metadata for records and metadata.
+  humanURL: https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/book_1559132836.html
+  baseURL: https://{accountid}.suitetalk.api.netsuite.com/services/rest
+  tags:
+  - REST
+  - SuiteQL
+  - Records
+  - Metadata
+  properties:
   - type: Documentation
-    url: https://docs.oracle.com/en/cloud/saas/netsuite/
-  - type: Developer Portal
-    url: https://www.netsuite.com/portal/platform/developer/suitecloud-developer-tools.shtml
-  - type: SuiteTalk Platform
-    url: https://www.netsuite.com/portal/platform/developer/suitetalk.shtml
-  - type: SignUp
-    url: https://www.netsuite.com/portal/forms/free-product-tour.shtml
+    url: https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/book_1559132836.html
+  - type: Overview
+    url: https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/chapter_1540391670.html
+  - type: API Browser
+    url: https://system.netsuite.com/help/helpcenter/en_US/APIs/REST_API_Browser/record/v1/2023.1/index.html
+  - url: graphql/netsuite-graphql.md
+    type: GraphQL
+- aid: netsuite:suitetalk-soap
+  name: NetSuite SuiteTalk SOAP Web Services
+  description: Long-standing SOAP-based integration API to NetSuite records and business
+    logic, suitable for bulk operations, custom records, and legacy ERP integration
+    scenarios.
+  humanURL: https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/book_1495296234.html
+  baseURL: https://{accountid}.suitetalk.api.netsuite.com/services/NetSuitePort_{version}
+  tags:
+  - SOAP
+  - Web Services
+  - ERP
+  properties:
+  - type: Documentation
+    url: https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/book_1495296234.html
+- aid: netsuite:restlets
+  name: NetSuite RESTlets
+  description: Framework for exposing custom server-side SuiteScript as REST endpoints
+    hosted in NetSuite, enabling tailored integrations and custom business logic over
+    HTTP.
+  humanURL: https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/chapter_4618456517.html
+  baseURL: https://{accountid}.restlets.api.netsuite.com/app/site/hosting/restlet.nl
+  tags:
+  - RESTlet
+  - SuiteScript
+  - Custom Endpoints
+  properties:
+  - type: Documentation
+    url: https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/chapter_4618456517.html
+common:
+- type: GitHubOrganization
+  url: https://github.com/netsuite
+- type: LinkedIn
+  url: https://www.linkedin.com/company/netsuite
+- type: Website
+  url: https://www.netsuite.com/
+- type: Documentation
+  url: https://docs.oracle.com/en/cloud/saas/netsuite/
+- type: Developer Portal
+  url: https://www.netsuite.com/portal/platform/developer/suitecloud-developer-tools.shtml
+- type: SuiteTalk Platform
+  url: https://www.netsuite.com/portal/platform/developer/suitetalk.shtml
+- type: SignUp
+  url: https://www.netsuite.com/portal/forms/free-product-tour.shtml
 maintainers:
-  - FN: Kin Lane
-    email: kin@apievangelist.com
+- FN: Kin Lane
+  email: kin@apievangelist.com
