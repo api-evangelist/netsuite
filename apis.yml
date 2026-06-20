@@ -8,7 +8,7 @@ description: Oracle NetSuite is a cloud-based business management suite that com
   (SuiteTalk SOAP), plus the RESTlets framework for exposing custom server-side SuiteScript
   as REST endpoints.
 type: Index
-image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
 tags:
 - ERP
 - CRM
