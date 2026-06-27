@@ -81,11 +81,11 @@ common:
   url: https://www.netsuite.com/
 - type: Documentation
   url: https://docs.oracle.com/en/cloud/saas/netsuite/
-- type: Developer Portal
+- type: DeveloperPortal
   url: https://www.netsuite.com/portal/platform/developer/suitecloud-developer-tools.shtml
 - type: SuiteTalk Platform
   url: https://www.netsuite.com/portal/platform/developer/suitetalk.shtml
-- type: SignUp
+- type: Signup
   url: https://www.netsuite.com/portal/forms/free-product-tour.shtml
 maintainers:
 - FN: Kin Lane
