@@ -28,7 +28,7 @@ image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/netsuite.p
 tags:
 - ERP
 - CRM
-- Financial
+- Finance
 - Accounting
 - Inventory
 - E-Commerce
@@ -43,6 +43,7 @@ tags_raw:
 - Ecommerce
 - Business Management
 - Cloud ERP
+- Financial
 url: https://raw.githubusercontent.com/api-evangelist/netsuite/refs/heads/main/apis.yml
 created: '2026-05-11'
 modified: '2026-05-11'
@@ -65,8 +66,6 @@ apis:
     url: https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/chapter_1540391670.html
   - type: API Browser
     url: https://system.netsuite.com/help/helpcenter/en_US/APIs/REST_API_Browser/record/v1/2023.1/index.html
-  - url: graphql/netsuite-graphql.md
-    type: GraphQL
 - aid: netsuite:suitetalk-soap
   name: NetSuite SuiteTalk SOAP Web Services
   description: Long-standing SOAP-based integration API to NetSuite records and business logic, suitable for bulk operations, custom records, and legacy ERP integration scenarios.
@@ -117,8 +116,6 @@ apis:
     url: https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_157780312610.html
   - type: Authentication Overview
     url: https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/chapter_4369651411.html
-  - url: graphql/oracle-netsuite-graphql.md
-    type: GraphQL
 - aid: netsuite:suiteql-query-api
   name: Oracle NetSuite SuiteQL Query API
   description: REST endpoint for executing SuiteQL (SQL-like) queries against NetSuite records and transactions for reporting and integration use cases. Returns paginated JSON results and uses the same OAuth 2.0 flows as the Record API.
