@@ -7,6 +7,7 @@ checked:
 - https://composio.dev/toolkits/netsuite
 - https://monid.ai/tools/netsuite
 - https://n8n.io/integrations/netsuite/
+- https://www.suiteapp.com/
 - https://zapier.com/apps/netsuite/integrations
 summary: null
 marketplace_apps:
@@ -154,6 +155,17 @@ marketplace_apps:
   - key: NETSUITE_UPDATE_VENDOR_BILL
   - key: NETSUITE_UPDATE_VENDOR_PAYMENT
   - key: NETSUITE_UPSERT_RECORD_BY_EXTERNAL_ID
+- marketplace: own
+  channel: partner-built
+  app: netsuite
+  url: https://www.suiteapp.com/
+  app_count: 760
+  adapter: sweep-accounting-stores.py:store_netsuite
+  listed: 760
+  platform_built: 53
+  partner_built: 706
+  order: store default
+  status: 'ok (no partner domain in any record: partners unlinked)'
 edges:
 - partner_name: Close
   partner: close
@@ -515,6 +527,1406 @@ edges:
     property: schemas.ExternalSource.sourceType
     detected_by: detect-payment-method-edges.py
     detected: '2026-10-12'
+- partner_name: SuitePos
+  app: NextSale - Commissions
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.suiteapp.com/NextSale-Commissions
+  category: Standard Application
+  detected_by: sweep-accounting-stores.py
+  detected: '2026-10-12'
+- partner_name: AIR Reply
+  app: AIR Reply Consolidated Sales Order SuiteApp for NetSuite
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.suiteapp.com/AIR-Consolidated-Sales-Order-SuiteApp-for-NetSuite
+  category: Standard Application
+  detected_by: sweep-accounting-stores.py
+  detected: '2026-10-12'
+- partner_name: Bring IT
+  app: Hotel 360° for NetSuite
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.suiteapp.com/Hotel-360-for-NetSuite
+  category: Standard Application
+  detected_by: sweep-accounting-stores.py
+  detected: '2026-10-12'
+- partner_name: Descartes Peoplevox
+  app: Descartes Peoplevox for NetSuite
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.suiteapp.com/Descartes-Peoplevox-for-NetSuite
+  category: Standard Application
+  detected_by: sweep-accounting-stores.py
+  detected: '2026-10-12'
+- partner_name: East West Bank
+  app: East West Bank Business Connect for NetSuite
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.suiteapp.com/East-West-Bank-Business-Connect-for-NetSuite
+  category: Standard Application
+  detected_by: sweep-accounting-stores.py
+  detected: '2026-10-12'
+- partner_name: Rockton Software
+  app: Rockton Pricing Management
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.suiteapp.com/Rockton-Pricing-Management
+  category: Standard Application
+  detected_by: sweep-accounting-stores.py
+  detected: '2026-10-12'
+- partner_name: Squire Technology, LLC
+  app: VendorCentral
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.suiteapp.com/VendorCentral
+  category: Standard Application
+  detected_by: sweep-accounting-stores.py
+  detected: '2026-10-12'
+- partner_name: Boomi
+  app: Boomi Integration - NetSuite REST
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.suiteapp.com/Boomi-Integration-NetSuite-REST
+  category: Standard Application
+  detected_by: sweep-accounting-stores.py
+  detected: '2026-10-12'
+- partner_name: Avalara
+  app: Avalara AvaTax for Communications for NetSuite (SuiteTax)
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.suiteapp.com/Avalara-AvaTax-for-Communications-for-NetSuite-SuiteTax
+  category: Standard Application
+  detected_by: sweep-accounting-stores.py
+  detected: '2026-10-12'
+- partner_name: Taxwire
+  app: Taxwire
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.suiteapp.com/Taxwire
+  category: Standard Application
+  detected_by: sweep-accounting-stores.py
+  detected: '2026-10-12'
+- partner_name: Laurel
+  app: Laurel for NetSuite
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.suiteapp.com/Laurel-for-NetSuite
+  category: AI Application
+  detected_by: sweep-accounting-stores.py
+  detected: '2026-10-12'
+- partner_name: BlueCollar Cloud Solutions
+  app: Procore Connector by BlueCollar
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.suiteapp.com/Procore-Connector-by-BlueCollar
+  category: Standard Application
+  detected_by: sweep-accounting-stores.py
+  detected: '2026-10-12'
+- partner_name: Columbia Bank
+  app: Columbia Sync | Powered by FISPAN
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.suiteapp.com/Columbia-Sync-Powered-by-FISPAN
+  category: Standard Application
+  detected_by: sweep-accounting-stores.py
+  detected: '2026-10-12'
+- partner_name: Omniboost
+  app: Omniboost Accounting for NetSuite
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.suiteapp.com/Omniboost-Accounting-for-NetSuite
+  category: Standard Application
+  detected_by: sweep-accounting-stores.py
+  detected: '2026-10-12'
+- partner_name: inSitu Sales
+  app: InSitu Sales DSD, Pre-Sales, & B2B Ecommerce
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.suiteapp.com/InSitu-Sales-DSD-Pre-Sales-B2B-Ecommerce
+  category: AI Application
+  detected_by: sweep-accounting-stores.py
+  detected: '2026-10-12'
+- partner_name: Loop ERP
+  app: Loop ERP
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.suiteapp.com/Loop-ERP
+  category: Standard Application
+  detected_by: sweep-accounting-stores.py
+  detected: '2026-10-12'
+- partner_name: LogiVeo
+  app: LogiVeo 3PL Billing and Shipping
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.suiteapp.com/LogiVeo-3PL-Billing-and-Shipping
+  category: AI Application
+  detected_by: sweep-accounting-stores.py
+  detected: '2026-10-12'
+- partner_name: Oracle Food and Beverage
+  app: Oracle NetSuite Restaurant Operations
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: null
+  relationship: platform-app
+  direction: provider-built
+  evidence: https://www.suiteapp.com/Oracle-NetSuite-Restaurant-Operations
+  category: AI Application
+  detected_by: sweep-accounting-stores.py
+  detected: '2026-10-12'
+- partner_name: FADEL
+  app: 'FADEL IPM Suite: Rights & Royalty Management for NetSuite'
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.suiteapp.com/FADEL-IPM-Suite-Rights-Royalty-Management-for-NetSuite
+  category: Standard Application
+  detected_by: sweep-accounting-stores.py
+  detected: '2026-10-12'
+- partner_name: SuiteDynamics
+  app: SuiteDynamics for NetSuite
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.suiteapp.com/SuiteDynamics-for-NetSuite
+  category: Standard Application
+  detected_by: sweep-accounting-stores.py
+  detected: '2026-10-12'
+- partner_name: Joga Incorporated Pte Ltd
+  app: Joga Membership & Booking Solutions
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.suiteapp.com/Joga-Membership-Booking-Solutions
+  category: Standard Application
+  detected_by: sweep-accounting-stores.py
+  detected: '2026-10-12'
+- partner_name: Redo Tech Inc.
+  app: Redo SuiteApp
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.suiteapp.com/Redo-SuiteApp
+  category: Standard Application
+  detected_by: sweep-accounting-stores.py
+  detected: '2026-10-12'
+- partner_name: BairesAi
+  app: Captura AP
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.suiteapp.com/Captura-AP
+  category: AI Application
+  detected_by: sweep-accounting-stores.py
+  detected: '2026-10-12'
+- partner_name: vayu
+  app: Vayu SuiteApp for NetSuite
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.suiteapp.com/Vayu-SuiteApp-for-NetSuite
+  category: Standard Application
+  detected_by: sweep-accounting-stores.py
+  detected: '2026-10-12'
+- partner_name: KPMG Israel
+  app: KPMG monday.com for NetSuite
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.suiteapp.com/KPMG-monday.com-for-NetSuite
+  category: Standard Application
+  detected_by: sweep-accounting-stores.py
+  detected: '2026-10-12'
+- partner_name: Prolecto Resources
+  app: Crypto Pricing, a Prolecto Solution
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.suiteapp.com/Crypto-Pricing-a-Prolecto-Solution
+  category: Standard Application
+  detected_by: sweep-accounting-stores.py
+  detected: '2026-10-12'
+- partner_name: BairesAi
+  app: Bank Feed Latam
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.suiteapp.com/BairesAi-Bank-Feed-Latam
+  category: AI Application
+  detected_by: sweep-accounting-stores.py
+  detected: '2026-10-12'
+- partner_name: Confido
+  app: Confido for NetSuite
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.suiteapp.com/Confido-for-NetSuite
+  category: AI Application
+  detected_by: sweep-accounting-stores.py
+  detected: '2026-10-12'
+- partner_name: Kamino Instituicao de Pagamento LTDA
+  app: Kamino SuiteApp
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.suiteapp.com/Kamino-SuiteApp
+  category: Standard Application
+  detected_by: sweep-accounting-stores.py
+  detected: '2026-10-12'
+- partner_name: MaintainX, An Autodesk Company
+  app: MaintainX for NetSuite
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.suiteapp.com/MaintainX-for-NetSuite
+  category: Standard Application
+  detected_by: sweep-accounting-stores.py
+  detected: '2026-10-12'
+- partner_name: Deposco, Inc.
+  app: Deposco for NetSuite
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.suiteapp.com/Deposco-for-NetSuite
+  category: AI Application
+  detected_by: sweep-accounting-stores.py
+  detected: '2026-10-12'
+- partner_name: Abacum
+  app: Abacum for NetSuite
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.suiteapp.com/Abacum-for-NetSuite
+  category: AI Application
+  detected_by: sweep-accounting-stores.py
+  detected: '2026-10-12'
+- partner_name: SuitePos
+  app: NextSale - TMS
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.suiteapp.com/NextSale-TMS
+  category: Standard Application
+  detected_by: sweep-accounting-stores.py
+  detected: '2026-10-12'
+- partner_name: HSBC Holdings plc
+  app: HSBC Integrator
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.suiteapp.com/HSBC-Integrator
+  category: Standard Application
+  detected_by: sweep-accounting-stores.py
+  detected: '2026-10-12'
+- partner_name: Nomentia Oy
+  app: Nomentia Smart Treasury for NetSuite
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.suiteapp.com/Nomentia-Smart-Treasury-for-NetSuite
+  category: Standard Application
+  detected_by: sweep-accounting-stores.py
+  detected: '2026-10-12'
+- partner_name: Auctane
+  app: ShipStation Native
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.suiteapp.com/ShipStation-Native
+  category: Standard Application
+  detected_by: sweep-accounting-stores.py
+  detected: '2026-10-12'
+- partner_name: Avalara, Inc
+  app: Avalara Brasil - Tax Compliance
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.suiteapp.com/Avalara-Brasil-Tax-Compliance
+  category: Standard Application
+  detected_by: sweep-accounting-stores.py
+  detected: '2026-10-12'
+- partner_name: Celigo
+  app: Celigo B2B Manager for EDI
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.suiteapp.com/Celigo-B2B-Manager-for-EDI
+  category: Standard Application
+  detected_by: sweep-accounting-stores.py
+  detected: '2026-10-12'
+- partner_name: Goldman Sachs
+  app: Goldman Sachs Transaction Banking (TxB) for NetSuite
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.suiteapp.com/Goldman-Sachs-Transaction-Banking-TxB-for-NetSuite
+  category: Standard Application
+  detected_by: sweep-accounting-stores.py
+  detected: '2026-10-12'
+- partner_name: Netsoft
+  app: NetSoft POS LATAM
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.suiteapp.com/NetSoft-POS-LATAM
+  category: Standard Application
+  detected_by: sweep-accounting-stores.py
+  detected: '2026-10-12'
+- partner_name: Doozy Solutions
+  app: TotalAg
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.suiteapp.com/TotalAg
+  category: Standard Application
+  detected_by: sweep-accounting-stores.py
+  detected: '2026-10-12'
+- partner_name: NetSuite internal
+  app: BB Lease
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: null
+  relationship: platform-app
+  direction: provider-built
+  evidence: https://www.suiteapp.com/BB-Lease
+  category: null
+  detected_by: sweep-accounting-stores.py
+  detected: '2026-10-12'
+- partner_name: Avalara, Inc.
+  app: Avalara Agentic Tax and Compliance for NetSuite SuiteTax
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.suiteapp.com/Avalara-Agentic-Tax-and-Compliance-for-NetSuite-SuiteTax
+  category: AI Elite Application
+  detected_by: sweep-accounting-stores.py
+  detected: '2026-10-12'
+- partner_name: Shiptheory
+  app: Shipping Rates by Shiptheory
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.suiteapp.com/Shipping-Rates-by-Shiptheory
+  category: Standard Application
+  detected_by: sweep-accounting-stores.py
+  detected: '2026-10-12'
+- partner_name: Testing Calls
+  app: Testing Calls
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: null
+  relationship: platform-app
+  direction: unknown
+  evidence: https://www.suiteapp.com/Testing-Calls
+  category: null
+  detected_by: sweep-accounting-stores.py
+  detected: '2026-10-12'
+- partner_name: Nova Module
+  app: PayPack - Stripe Payments for NetSuite
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.suiteapp.com/PayPack-Stripe-Payments-for-NetSuite
+  category: Standard Application
+  detected_by: sweep-accounting-stores.py
+  detected: '2026-10-12'
+- partner_name: FASTBOUND, INC.
+  app: FastBound ATF Compliance Connector
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.suiteapp.com/FastBound-ATF-Compliance-Connector
+  category: Standard Application
+  detected_by: sweep-accounting-stores.py
+  detected: '2026-10-12'
+- partner_name: Sphere
+  app: Sphere for SuiteTax
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.suiteapp.com/Sphere-for-SuiteTax
+  category: Standard Application
+  detected_by: sweep-accounting-stores.py
+  detected: '2026-10-12'
+- partner_name: Tractian Technologies Inc.
+  app: Tractian Maintenance Management for NetSuite
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.suiteapp.com/Tractian-Maintenance-Management-for-NetSuite
+  category: AI Application
+  detected_by: sweep-accounting-stores.py
+  detected: '2026-10-12'
+- partner_name: Digibee INC.
+  app: Digibee for NetSuite
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.suiteapp.com/Digibee-for-NetSuite
+  category: Integrated
+  detected_by: sweep-accounting-stores.py
+  detected: '2026-10-12'
+- partner_name: Vertical Bar
+  app: Vertical Bar for NetSuite
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.suiteapp.com/Vertical-Bar-for-NetSuite
+  category: AI Application
+  detected_by: sweep-accounting-stores.py
+  detected: '2026-10-12'
+- partner_name: SuiteRetail Inc.
+  app: SuitePOS
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.suiteapp.com/SuitePOS
+  category: Standard Application
+  detected_by: sweep-accounting-stores.py
+  detected: '2026-10-12'
+- partner_name: BTS One EOOD
+  app: BTS One Bulgaria SAF-T for NetSuite
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.suiteapp.com/BTS-One-Bulgaria-SAF-T-for-NetSuite
+  category: Standard Application
+  detected_by: sweep-accounting-stores.py
+  detected: '2026-10-12'
+- partner_name: Texas Capital
+  app: Texas Capital ConnectNow
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.suiteapp.com/Texas-Capital-ConnectNow
+  category: Standard Application
+  detected_by: sweep-accounting-stores.py
+  detected: '2026-10-12'
+- partner_name: Nevada State Bank
+  app: Nevada State Bank for NetSuite
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.suiteapp.com/Nevada-State-Bank-for-NetSuite
+  category: Hybrid
+  detected_by: sweep-accounting-stores.py
+  detected: '2026-10-12'
+- partner_name: National Bank of Arizona
+  app: National Bank of Arizona for NetSuite
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.suiteapp.com/National-Bank-of-Arizona-for-NetSuite
+  category: Hybrid
+  detected_by: sweep-accounting-stores.py
+  detected: '2026-10-12'
+- partner_name: California Bank & Trust
+  app: California Bank & Trust for NetSuite
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.suiteapp.com/California-Bank-Trust-for-NetSuite
+  category: Hybrid
+  detected_by: sweep-accounting-stores.py
+  detected: '2026-10-12'
+- partner_name: Amegy Bank
+  app: Amegy Bank for NetSuite
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.suiteapp.com/Amegy-Bank-for-NetSuite
+  category: Hybrid
+  detected_by: sweep-accounting-stores.py
+  detected: '2026-10-12'
+- partner_name: Nevada State Bank
+  app: Vectra Bank Colorado for NetSuite
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.suiteapp.com/Vectra-Bank-Colorado-for-NetSuite
+  category: Hybrid
+  detected_by: sweep-accounting-stores.py
+  detected: '2026-10-12'
+- partner_name: SuitePos
+  app: NextSale POS for NetSuite
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.suiteapp.com/NextSale-POS-for-NetSuite
+  category: Standard Application
+  detected_by: sweep-accounting-stores.py
+  detected: '2026-10-12'
+- partner_name: Zions Bank
+  app: Zions Bank for NetSuite
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.suiteapp.com/Zions-Bank-for-NetSuite
+  category: Standard Application
+  detected_by: sweep-accounting-stores.py
+  detected: '2026-10-12'
+- partner_name: RecoLabs Inc.
+  app: Reco
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.suiteapp.com/Reco
+  category: Standard Application
+  detected_by: sweep-accounting-stores.py
+  detected: '2026-10-12'
+- partner_name: Mitsubishi UFJ Financial Group (MUFG)
+  app: MUFG Connect Embedded Banking | Powered by FISPAN
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.suiteapp.com/MUFG-Connect-Embedded-Banking-Powered-by-FISPAN
+  category: Standard Application
+  detected_by: sweep-accounting-stores.py
+  detected: '2026-10-12'
+- partner_name: Aatrix-Sovos
+  app: Aatrix Enhanced 1099 Reporting
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.suiteapp.com/Aatrix-Enhanced-1099-Reporting
+  category: Standard Application
+  detected_by: sweep-accounting-stores.py
+  detected: '2026-10-12'
+- partner_name: OptiMed Tech, LLC
+  app: OptiMed for NetSuite
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.suiteapp.com/OptiMed-for-NetSuite
+  category: Standard Application
+  detected_by: sweep-accounting-stores.py
+  detected: '2026-10-12'
+- partner_name: First Citizens Bank
+  app: First Citizens Link | Powered by FISPAN
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.suiteapp.com/First-Citizens-Link-Powered-by-FISPAN
+  category: Standard Application
+  detected_by: sweep-accounting-stores.py
+  detected: '2026-10-12'
+- partner_name: Cryptio
+  app: Cryptio
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.suiteapp.com/Cryptio
+  category: Standard Application
+  detected_by: sweep-accounting-stores.py
+  detected: '2026-10-12'
+- partner_name: NPact
+  app: NPact Fund Investment Tool
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.suiteapp.com/NPact-Fund-Investment-Tool
+  category: Standard Application
+  detected_by: sweep-accounting-stores.py
+  detected: '2026-10-12'
+- partner_name: Vertex, Inc
+  app: Kintsugi Powered by Vertex for NetSuite (SuiteTax)
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.suiteapp.com/Kintsugi-Powered-by-Vertex
+  category: Standard Application
+  detected_by: sweep-accounting-stores.py
+  detected: '2026-10-12'
+- partner_name: Numeral
+  app: Numeral for SuiteTax
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.suiteapp.com/Numeral
+  category: Standard Application
+  detected_by: sweep-accounting-stores.py
+  detected: '2026-10-12'
+- partner_name: Verified First
+  app: Verified First
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.suiteapp.com/Verified-First
+  category: Standard Application
+  detected_by: sweep-accounting-stores.py
+  detected: '2026-10-12'
+- partner_name: Adyen
+  app: Adyen Payments SuiteApp for NetSuite
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.suiteapp.com/Adyen-Payments-SuiteApp-for-NetSuite
+  category: Standard Application
+  detected_by: sweep-accounting-stores.py
+  detected: '2026-10-12'
+- partner_name: Tavano Team
+  app: BigCommerce Connector for NetSuite by Tavano Team
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.suiteapp.com/BigCommerce-Connector-for-NetSuite-by-Tavano-Team
+  category: Standard Application
+  detected_by: sweep-accounting-stores.py
+  detected: '2026-10-12'
+- partner_name: BTG PACTUAL
+  app: BTG Pactual Empresas for NetSuite
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.suiteapp.com/BTG-Pactual-Empresas-for-NetSuite
+  category: Standard Application
+  detected_by: sweep-accounting-stores.py
+  detected: '2026-10-12'
+- partner_name: Nova Module
+  app: NovaApps
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.suiteapp.com/NovaApps
+  category: Standard Application
+  detected_by: sweep-accounting-stores.py
+  detected: '2026-10-12'
+- partner_name: ScaleNorth
+  app: Tariff Management Accelerator by ScaleNorth
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.suiteapp.com/Tariff-Management-Accelerator-by-ScaleNorth
+  category: Standard Application
+  detected_by: sweep-accounting-stores.py
+  detected: '2026-10-12'
+- partner_name: Ottimate
+  app: Ottimate
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.suiteapp.com/Ottimate
+  category: AI Application
+  detected_by: sweep-accounting-stores.py
+  detected: '2026-10-12'
+- partner_name: Datas Technology LLC
+  app: Ukrainian Localisation for NetSuite
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.suiteapp.com/Ukrainian-Localisation-for-NetSuite
+  category: Standard Application
+  detected_by: sweep-accounting-stores.py
+  detected: '2026-10-12'
+- partner_name: Variabl
+  app: Variabl
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.suiteapp.com/ZenCentiv
+  category: AI Application
+  detected_by: sweep-accounting-stores.py
+  detected: '2026-10-12'
+- partner_name: VATCalc
+  app: VATCalc
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.suiteapp.com/VATCalc
+  category: Standard Application
+  detected_by: sweep-accounting-stores.py
+  detected: '2026-10-12'
+- partner_name: Money Forward, Inc.
+  app: Money Forward Cloud Fixed Asset
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.suiteapp.com/Money-Forward-Cloud-Fixed-Asset
+  category: Standard Application
+  detected_by: sweep-accounting-stores.py
+  detected: '2026-10-12'
+- partner_name: Staria
+  app: Staria Poland Localization SuiteApp (SDF)
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.suiteapp.com/Staria-Poland-Localisation-SuiteApp-SDF
+  category: Standard Application
+  detected_by: sweep-accounting-stores.py
+  detected: '2026-10-12'
+- partner_name: eTribez
+  app: eTribez for NetSuite
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.suiteapp.com/eTribez-for-NetSuite
+  category: Standard Application
+  detected_by: sweep-accounting-stores.py
+  detected: '2026-10-12'
+- partner_name: AIVER AI, Inc
+  app: AIVER Travel Entertainment Expense Audit Intelligence SuiteApp
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.suiteapp.com/AIVER-T-E-Audit-Intelligence-SuiteApp
+  category: AI Application
+  detected_by: sweep-accounting-stores.py
+  detected: '2026-10-12'
+- partner_name: ERP Success Partners Inc.
+  app: Field Operations Pro
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.suiteapp.com/Field-Operations-Pro
+  category: Standard Application
+  detected_by: sweep-accounting-stores.py
+  detected: '2026-10-12'
+- partner_name: Chaser
+  app: Chaser
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.suiteapp.com/Chaser
+  category: Standard Application
+  detected_by: sweep-accounting-stores.py
+  detected: '2026-10-12'
+- partner_name: Customers Bank
+  app: Customers Bank Connect | Powered by FISPAN
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.suiteapp.com/Customers-Bank-Connect-Powered-by-FISPAN
+  category: Standard Application
+  detected_by: sweep-accounting-stores.py
+  detected: '2026-10-12'
+- partner_name: ReverseLogix Corp.
+  app: ReverseLogix
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.suiteapp.com/ReverseLogix
+  category: Standard Application
+  detected_by: sweep-accounting-stores.py
+  detected: '2026-10-12'
+- partner_name: Doozy Solutions
+  app: TotalBatch
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.suiteapp.com/TotalBatch
+  category: Standard Application
+  detected_by: sweep-accounting-stores.py
+  detected: '2026-10-12'
+- partner_name: Tabs Platform, Inc.
+  app: Tabs
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.suiteapp.com/Tabs
+  category: AI Application
+  detected_by: sweep-accounting-stores.py
+  detected: '2026-10-12'
+- partner_name: Blue Ridge Solutions
+  app: Blue Ridge AI Supply Chain Planning for NetSuite
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.suiteapp.com/Blue-Ridge-Platform-for-NetSuite
+  category: Standard Application
+  detected_by: sweep-accounting-stores.py
+  detected: '2026-10-12'
+- partner_name: Asten by AVMB Group
+  app: Asten Smart Bot WhatsApp for NetSuite
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.suiteapp.com/Asten-Smart-Bot-WhatsApp-for-NetSuite
+  category: AI Application
+  detected_by: sweep-accounting-stores.py
+  detected: '2026-10-12'
+- partner_name: Legion Intelligence
+  app: Legion Service Operations Pack
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.suiteapp.com/Legion-for-NetSuite
+  category: AI Application
+  detected_by: sweep-accounting-stores.py
+  detected: '2026-10-12'
+- partner_name: 8Quanta
+  app: 8Q Expense Report Automation
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.suiteapp.com/8Q-Expense-Report-Automation
+  category: Standard Application
+  detected_by: sweep-accounting-stores.py
+  detected: '2026-10-12'
+- partner_name: Everstage
+  app: Everstage Incentives for NetSuite
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.suiteapp.com/Everstage-Incentives-for-NetSuite
+  category: AI Application
+  detected_by: sweep-accounting-stores.py
+  detected: '2026-10-12'
+- partner_name: Ledge
+  app: Ledge - Accounting Automation
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.suiteapp.com/Ledge-SuiteApp
+  category: AI Application
+  detected_by: sweep-accounting-stores.py
+  detected: '2026-10-12'
+- partner_name: Wholechain Inc
+  app: Wholechain for NetSuite
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.suiteapp.com/Wholechain-for-NetSuite
+  category: Standard Application
+  detected_by: sweep-accounting-stores.py
+  detected: '2026-10-12'
+- partner_name: Revalize Software ltd
+  app: Configure One Cloud from Revalize
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.suiteapp.com/Configure-One-Cloud-from-Revalize
+  category: Standard Application
+  detected_by: sweep-accounting-stores.py
+  detected: '2026-10-12'
+- partner_name: Factor Systems, LLC
+  app: Billtrust Connector for NetSuite
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.suiteapp.com/Billtrust-Connector-for-NetSuite
+  category: Standard Application
+  detected_by: sweep-accounting-stores.py
+  detected: '2026-10-12'
+- partner_name: Cauzzy, Inc.
+  app: Cauzzy AI for NetSuite
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.suiteapp.com/Cauzzy-AI-for-NetSuite
+  category: AI Application
+  detected_by: sweep-accounting-stores.py
+  detected: '2026-10-12'
 templates:
 - title: Create or update NetSuite records when new contacts are added in HubSpot
   url: https://zapier.com/apps/hubspot/integrations/netsuite/1811253/create-or-update-netsuite-records-when-new-contacts-are-added-in-hubspot

@@ -403,3 +403,1135 @@
     detected: '2026-10-12'
   status: not-a-workflow
   arazzo: null
+- slug: netsuite-suitepos
+  label: SuitePos
+  partner_name: SuitePos
+  category: Standard Application
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.suiteapp.com/NextSale-Commissions
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: netsuite-air-reply
+  label: AIR Reply
+  partner_name: AIR Reply
+  category: Standard Application
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.suiteapp.com/AIR-Consolidated-Sales-Order-SuiteApp-for-NetSuite
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: netsuite-bring-it
+  label: Bring IT
+  partner_name: Bring IT
+  category: Standard Application
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.suiteapp.com/Hotel-360-for-NetSuite
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: netsuite-descartes-peoplevox
+  label: Descartes Peoplevox
+  partner_name: Descartes Peoplevox
+  category: Standard Application
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.suiteapp.com/Descartes-Peoplevox-for-NetSuite
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: netsuite-east-west-bank
+  label: East West Bank
+  partner_name: East West Bank
+  category: Standard Application
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.suiteapp.com/East-West-Bank-Business-Connect-for-NetSuite
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: netsuite-rockton-software
+  label: Rockton Software
+  partner_name: Rockton Software
+  category: Standard Application
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.suiteapp.com/Rockton-Pricing-Management
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: netsuite-squire-technology-llc
+  label: Squire Technology, LLC
+  partner_name: Squire Technology, LLC
+  category: Standard Application
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.suiteapp.com/VendorCentral
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: netsuite-boomi
+  label: Boomi
+  partner: boomi
+  partner_name: Boomi
+  category: Standard Application
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.suiteapp.com/Boomi-Integration-NetSuite-REST
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: netsuite-avalara
+  label: Avalara
+  partner: avalara
+  partner_name: Avalara
+  category: Standard Application
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.suiteapp.com/Avalara-AvaTax-for-Communications-for-NetSuite-SuiteTax
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: netsuite-taxwire
+  label: Taxwire
+  partner_name: Taxwire
+  category: Standard Application
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.suiteapp.com/Taxwire
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: netsuite-laurel
+  label: Laurel
+  partner: laurel
+  partner_name: Laurel
+  category: AI Application
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.suiteapp.com/Laurel-for-NetSuite
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: netsuite-bluecollar-cloud-solutions
+  label: BlueCollar Cloud Solutions
+  partner_name: BlueCollar Cloud Solutions
+  category: Standard Application
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.suiteapp.com/Procore-Connector-by-BlueCollar
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: netsuite-columbia-bank
+  label: Columbia Bank
+  partner_name: Columbia Bank
+  category: Standard Application
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.suiteapp.com/Columbia-Sync-Powered-by-FISPAN
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: netsuite-omniboost
+  label: Omniboost
+  partner_name: Omniboost
+  category: Standard Application
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.suiteapp.com/Omniboost-Accounting-for-NetSuite
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: netsuite-insitu-sales
+  label: inSitu Sales
+  partner_name: inSitu Sales
+  category: AI Application
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.suiteapp.com/InSitu-Sales-DSD-Pre-Sales-B2B-Ecommerce
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: netsuite-loop-erp
+  label: Loop ERP
+  partner_name: Loop ERP
+  category: Standard Application
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.suiteapp.com/Loop-ERP
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: netsuite-logiveo
+  label: LogiVeo
+  partner_name: LogiVeo
+  category: AI Application
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.suiteapp.com/LogiVeo-3PL-Billing-and-Shipping
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: netsuite-oracle-food-and-beverage
+  label: Oracle Food and Beverage
+  partner_name: Oracle Food and Beverage
+  category: AI Application
+  type: marketplace
+  marketplace: own
+  evidence: https://www.suiteapp.com/Oracle-NetSuite-Restaurant-Operations
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: netsuite-fadel
+  label: FADEL
+  partner_name: FADEL
+  category: Standard Application
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.suiteapp.com/FADEL-IPM-Suite-Rights-Royalty-Management-for-NetSuite
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: netsuite-suitedynamics
+  label: SuiteDynamics
+  partner_name: SuiteDynamics
+  category: Standard Application
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.suiteapp.com/SuiteDynamics-for-NetSuite
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: netsuite-joga-incorporated-pte-ltd
+  label: Joga Incorporated Pte Ltd
+  partner_name: Joga Incorporated Pte Ltd
+  category: Standard Application
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.suiteapp.com/Joga-Membership-Booking-Solutions
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: netsuite-redo-tech-inc
+  label: Redo Tech Inc.
+  partner_name: Redo Tech Inc.
+  category: Standard Application
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.suiteapp.com/Redo-SuiteApp
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: netsuite-bairesai
+  label: BairesAi
+  partner_name: BairesAi
+  category: AI Application
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.suiteapp.com/Captura-AP
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: netsuite-vayu
+  label: vayu
+  partner_name: vayu
+  category: Standard Application
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.suiteapp.com/Vayu-SuiteApp-for-NetSuite
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: netsuite-kpmg-israel
+  label: KPMG Israel
+  partner_name: KPMG Israel
+  category: Standard Application
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.suiteapp.com/KPMG-monday.com-for-NetSuite
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: netsuite-prolecto-resources
+  label: Prolecto Resources
+  partner_name: Prolecto Resources
+  category: Standard Application
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.suiteapp.com/Crypto-Pricing-a-Prolecto-Solution
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: netsuite-confido
+  label: Confido
+  partner_name: Confido
+  category: AI Application
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.suiteapp.com/Confido-for-NetSuite
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: netsuite-kamino-instituicao-de-pagamento-ltda
+  label: Kamino Instituicao de Pagamento LTDA
+  partner_name: Kamino Instituicao de Pagamento LTDA
+  category: Standard Application
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.suiteapp.com/Kamino-SuiteApp
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: netsuite-maintainx-an-autodesk-company
+  label: MaintainX, An Autodesk Company
+  partner_name: MaintainX, An Autodesk Company
+  category: Standard Application
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.suiteapp.com/MaintainX-for-NetSuite
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: netsuite-deposco-inc
+  label: Deposco, Inc.
+  partner_name: Deposco, Inc.
+  category: AI Application
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.suiteapp.com/Deposco-for-NetSuite
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: netsuite-abacum
+  label: Abacum
+  partner_name: Abacum
+  category: AI Application
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.suiteapp.com/Abacum-for-NetSuite
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: netsuite-hsbc-holdings-plc
+  label: HSBC Holdings plc
+  partner_name: HSBC Holdings plc
+  category: Standard Application
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.suiteapp.com/HSBC-Integrator
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: netsuite-nomentia-oy
+  label: Nomentia Oy
+  partner_name: Nomentia Oy
+  category: Standard Application
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.suiteapp.com/Nomentia-Smart-Treasury-for-NetSuite
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: netsuite-auctane
+  label: Auctane
+  partner_name: Auctane
+  category: Standard Application
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.suiteapp.com/ShipStation-Native
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: netsuite-avalara-inc
+  label: Avalara, Inc
+  partner_name: Avalara, Inc
+  category: Standard Application
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.suiteapp.com/Avalara-Brasil-Tax-Compliance
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: netsuite-celigo
+  label: Celigo
+  partner: celigo
+  partner_name: Celigo
+  category: Standard Application
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.suiteapp.com/Celigo-B2B-Manager-for-EDI
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: netsuite-goldman-sachs
+  label: Goldman Sachs
+  partner_name: Goldman Sachs
+  category: Standard Application
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.suiteapp.com/Goldman-Sachs-Transaction-Banking-TxB-for-NetSuite
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: netsuite-netsoft
+  label: Netsoft
+  partner_name: Netsoft
+  category: Standard Application
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.suiteapp.com/NetSoft-POS-LATAM
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: netsuite-doozy-solutions
+  label: Doozy Solutions
+  partner_name: Doozy Solutions
+  category: Standard Application
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.suiteapp.com/TotalAg
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: netsuite-netsuite-internal
+  label: NetSuite internal
+  partner_name: NetSuite internal
+  type: marketplace
+  marketplace: own
+  evidence: https://www.suiteapp.com/BB-Lease
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: netsuite-avalara-inc
+  label: Avalara, Inc.
+  partner_name: Avalara, Inc.
+  category: AI Elite Application
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.suiteapp.com/Avalara-Agentic-Tax-and-Compliance-for-NetSuite-SuiteTax
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: netsuite-shiptheory
+  label: Shiptheory
+  partner_name: Shiptheory
+  category: Standard Application
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.suiteapp.com/Shipping-Rates-by-Shiptheory
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: netsuite-testing-calls
+  label: Testing Calls
+  partner_name: Testing Calls
+  type: marketplace
+  marketplace: own
+  evidence: https://www.suiteapp.com/Testing-Calls
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: netsuite-nova-module
+  label: Nova Module
+  partner_name: Nova Module
+  category: Standard Application
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.suiteapp.com/PayPack-Stripe-Payments-for-NetSuite
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: netsuite-fastbound-inc
+  label: FASTBOUND, INC.
+  partner_name: FASTBOUND, INC.
+  category: Standard Application
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.suiteapp.com/FastBound-ATF-Compliance-Connector
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: netsuite-sphere
+  label: Sphere
+  partner_name: Sphere
+  category: Standard Application
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.suiteapp.com/Sphere-for-SuiteTax
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: netsuite-tractian-technologies-inc
+  label: Tractian Technologies Inc.
+  partner_name: Tractian Technologies Inc.
+  category: AI Application
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.suiteapp.com/Tractian-Maintenance-Management-for-NetSuite
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: netsuite-digibee-inc
+  label: Digibee INC.
+  partner_name: Digibee INC.
+  category: Integrated
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.suiteapp.com/Digibee-for-NetSuite
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: netsuite-vertical-bar
+  label: Vertical Bar
+  partner_name: Vertical Bar
+  category: AI Application
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.suiteapp.com/Vertical-Bar-for-NetSuite
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: netsuite-suiteretail-inc
+  label: SuiteRetail Inc.
+  partner_name: SuiteRetail Inc.
+  category: Standard Application
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.suiteapp.com/SuitePOS
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: netsuite-bts-one-eood
+  label: BTS One EOOD
+  partner_name: BTS One EOOD
+  category: Standard Application
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.suiteapp.com/BTS-One-Bulgaria-SAF-T-for-NetSuite
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: netsuite-texas-capital
+  label: Texas Capital
+  partner_name: Texas Capital
+  category: Standard Application
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.suiteapp.com/Texas-Capital-ConnectNow
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: netsuite-nevada-state-bank
+  label: Nevada State Bank
+  partner_name: Nevada State Bank
+  category: Hybrid
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.suiteapp.com/Nevada-State-Bank-for-NetSuite
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: netsuite-national-bank-of-arizona
+  label: National Bank of Arizona
+  partner_name: National Bank of Arizona
+  category: Hybrid
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.suiteapp.com/National-Bank-of-Arizona-for-NetSuite
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: netsuite-california-bank-trust
+  label: California Bank & Trust
+  partner_name: California Bank & Trust
+  category: Hybrid
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.suiteapp.com/California-Bank-Trust-for-NetSuite
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: netsuite-amegy-bank
+  label: Amegy Bank
+  partner_name: Amegy Bank
+  category: Hybrid
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.suiteapp.com/Amegy-Bank-for-NetSuite
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: netsuite-zions-bank
+  label: Zions Bank
+  partner_name: Zions Bank
+  category: Standard Application
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.suiteapp.com/Zions-Bank-for-NetSuite
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: netsuite-recolabs-inc
+  label: RecoLabs Inc.
+  partner_name: RecoLabs Inc.
+  category: Standard Application
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.suiteapp.com/Reco
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: netsuite-mitsubishi-ufj-financial-group-mufg
+  label: Mitsubishi UFJ Financial Group (MUFG)
+  partner_name: Mitsubishi UFJ Financial Group (MUFG)
+  category: Standard Application
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.suiteapp.com/MUFG-Connect-Embedded-Banking-Powered-by-FISPAN
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: netsuite-aatrix-sovos
+  label: Aatrix-Sovos
+  partner_name: Aatrix-Sovos
+  category: Standard Application
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.suiteapp.com/Aatrix-Enhanced-1099-Reporting
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: netsuite-optimed-tech-llc
+  label: OptiMed Tech, LLC
+  partner_name: OptiMed Tech, LLC
+  category: Standard Application
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.suiteapp.com/OptiMed-for-NetSuite
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: netsuite-first-citizens-bank
+  label: First Citizens Bank
+  partner_name: First Citizens Bank
+  category: Standard Application
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.suiteapp.com/First-Citizens-Link-Powered-by-FISPAN
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: netsuite-cryptio
+  label: Cryptio
+  partner_name: Cryptio
+  category: Standard Application
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.suiteapp.com/Cryptio
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: netsuite-npact
+  label: NPact
+  partner_name: NPact
+  category: Standard Application
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.suiteapp.com/NPact-Fund-Investment-Tool
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: netsuite-vertex-inc
+  label: Vertex, Inc
+  partner_name: Vertex, Inc
+  category: Standard Application
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.suiteapp.com/Kintsugi-Powered-by-Vertex
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: netsuite-numeral
+  label: Numeral
+  partner: numeral
+  partner_name: Numeral
+  category: Standard Application
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.suiteapp.com/Numeral
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: netsuite-verified-first
+  label: Verified First
+  partner_name: Verified First
+  category: Standard Application
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.suiteapp.com/Verified-First
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: netsuite-adyen
+  label: Adyen
+  partner: adyen
+  partner_name: Adyen
+  category: Standard Application
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.suiteapp.com/Adyen-Payments-SuiteApp-for-NetSuite
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: netsuite-tavano-team
+  label: Tavano Team
+  partner_name: Tavano Team
+  category: Standard Application
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.suiteapp.com/BigCommerce-Connector-for-NetSuite-by-Tavano-Team
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: netsuite-btg-pactual
+  label: BTG PACTUAL
+  partner_name: BTG PACTUAL
+  category: Standard Application
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.suiteapp.com/BTG-Pactual-Empresas-for-NetSuite
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: netsuite-scalenorth
+  label: ScaleNorth
+  partner_name: ScaleNorth
+  category: Standard Application
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.suiteapp.com/Tariff-Management-Accelerator-by-ScaleNorth
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: netsuite-ottimate
+  label: Ottimate
+  partner: ottimate
+  partner_name: Ottimate
+  category: AI Application
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.suiteapp.com/Ottimate
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: netsuite-datas-technology-llc
+  label: Datas Technology LLC
+  partner_name: Datas Technology LLC
+  category: Standard Application
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.suiteapp.com/Ukrainian-Localisation-for-NetSuite
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: netsuite-variabl
+  label: Variabl
+  partner_name: Variabl
+  category: AI Application
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.suiteapp.com/ZenCentiv
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: netsuite-vatcalc
+  label: VATCalc
+  partner_name: VATCalc
+  category: Standard Application
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.suiteapp.com/VATCalc
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: netsuite-money-forward-inc
+  label: Money Forward, Inc.
+  partner_name: Money Forward, Inc.
+  category: Standard Application
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.suiteapp.com/Money-Forward-Cloud-Fixed-Asset
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: netsuite-staria
+  label: Staria
+  partner_name: Staria
+  category: Standard Application
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.suiteapp.com/Staria-Poland-Localisation-SuiteApp-SDF
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: netsuite-etribez
+  label: eTribez
+  partner_name: eTribez
+  category: Standard Application
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.suiteapp.com/eTribez-for-NetSuite
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: netsuite-aiver-ai-inc
+  label: AIVER AI, Inc
+  partner_name: AIVER AI, Inc
+  category: AI Application
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.suiteapp.com/AIVER-T-E-Audit-Intelligence-SuiteApp
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: netsuite-erp-success-partners-inc
+  label: ERP Success Partners Inc.
+  partner_name: ERP Success Partners Inc.
+  category: Standard Application
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.suiteapp.com/Field-Operations-Pro
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: netsuite-chaser
+  label: Chaser
+  partner_name: Chaser
+  category: Standard Application
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.suiteapp.com/Chaser
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: netsuite-customers-bank
+  label: Customers Bank
+  partner: customers-bank
+  partner_name: Customers Bank
+  category: Standard Application
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.suiteapp.com/Customers-Bank-Connect-Powered-by-FISPAN
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: netsuite-reverselogix-corp
+  label: ReverseLogix Corp.
+  partner_name: ReverseLogix Corp.
+  category: Standard Application
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.suiteapp.com/ReverseLogix
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: netsuite-tabs-platform-inc
+  label: Tabs Platform, Inc.
+  partner_name: Tabs Platform, Inc.
+  category: AI Application
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.suiteapp.com/Tabs
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: netsuite-blue-ridge-solutions
+  label: Blue Ridge Solutions
+  partner_name: Blue Ridge Solutions
+  category: Standard Application
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.suiteapp.com/Blue-Ridge-Platform-for-NetSuite
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: netsuite-asten-by-avmb-group
+  label: Asten by AVMB Group
+  partner_name: Asten by AVMB Group
+  category: AI Application
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.suiteapp.com/Asten-Smart-Bot-WhatsApp-for-NetSuite
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: netsuite-legion-intelligence
+  label: Legion Intelligence
+  partner_name: Legion Intelligence
+  category: AI Application
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.suiteapp.com/Legion-for-NetSuite
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: netsuite-8quanta
+  label: 8Quanta
+  partner_name: 8Quanta
+  category: Standard Application
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.suiteapp.com/8Q-Expense-Report-Automation
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: netsuite-everstage
+  label: Everstage
+  partner_name: Everstage
+  category: AI Application
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.suiteapp.com/Everstage-Incentives-for-NetSuite
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: netsuite-ledge
+  label: Ledge
+  partner: ledge
+  partner_name: Ledge
+  category: AI Application
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.suiteapp.com/Ledge-SuiteApp
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: netsuite-wholechain-inc
+  label: Wholechain Inc
+  partner_name: Wholechain Inc
+  category: Standard Application
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.suiteapp.com/Wholechain-for-NetSuite
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: netsuite-revalize-software-ltd
+  label: Revalize Software ltd
+  partner_name: Revalize Software ltd
+  category: Standard Application
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.suiteapp.com/Configure-One-Cloud-from-Revalize
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: netsuite-factor-systems-llc
+  label: Factor Systems, LLC
+  partner_name: Factor Systems, LLC
+  category: Standard Application
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.suiteapp.com/Billtrust-Connector-for-NetSuite
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: netsuite-cauzzy-inc
+  label: Cauzzy, Inc.
+  partner_name: Cauzzy, Inc.
+  category: AI Application
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.suiteapp.com/Cauzzy-AI-for-NetSuite
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
