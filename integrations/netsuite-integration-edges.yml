@@ -1,0 +1,579 @@
+generated: '2026-10-12'
+method: searched
+source:
+- https://zapier.com/apps/netsuite/integrations
+- https://composio.dev/toolkits/netsuite
+checked:
+- https://composio.dev/toolkits/netsuite
+- https://monid.ai/tools/netsuite
+- https://n8n.io/integrations/netsuite/
+- https://zapier.com/apps/netsuite/integrations
+summary: null
+marketplace_apps:
+- marketplace: zapier
+  channel: ipaas-listing
+  app: netsuite
+  url: https://zapier.com/apps/netsuite/integrations
+  external_url: https://netsuite.com/
+  partner_tier: GOLD
+  triggers:
+  - key: record
+    label: New Record
+  - key: saved_search_record
+    label: New Record (Saved Search)
+  - key: updated_record
+    label: New Or Updated Record
+  actions:
+  - key: attach_file
+    label: Attach Existing File to Record
+  - key: bulk_import_records
+    label: Bulk Import Records
+  - key: create_or_update_folder
+    label: Create or Update Folder
+  - key: delete_record
+    label: Delete Record
+  - key: detach_file
+    label: Detach File from Record
+  - key: execute_suiteql_query
+    label: Run SuiteQL Query
+  - key: record_v2
+    label: Create Record
+  - key: transform_record
+    label: Transform Record
+  - key: update_record_v2
+    label: Update Record
+  - key: upload_file
+    label: Upload File to File Cabinet
+  - key: upsert_record_v2
+    label: Upsert (Create or Update) Record
+  - key: _zap_raw_request
+    label: API Request (Beta)
+  searches:
+  - key: find_bulk_import_status
+    label: Get Bulk Import Status
+  - key: find_case_notes
+    label: Find Case Notes
+  - key: find_file
+    label: Find File In File Cabinet
+  - key: find_record
+    label: Find Record
+  - key: find_records_saved_search_v2
+    label: Find Records (Saved Search)
+  - key: find_records_v2
+    label: Find Records (with line-item support)
+  - key: record_schema
+    label: Get Record Type (Object) Schema
+- marketplace: composio
+  channel: agent-gateway
+  app: netsuite
+  url: https://composio.dev/toolkits/netsuite
+  identity: action-prefix
+  actions:
+  - key: NETSUITE_ASYNC_GET_JOB_STATUS
+  - key: NETSUITE_ASYNC_GET_JOB_TASK
+  - key: NETSUITE_ASYNC_GET_JOB_TASK_RESULT
+  - key: NETSUITE_CREATE_CUSTOMER
+  - key: NETSUITE_CREATE_CUSTOMER_PAYMENT
+  - key: NETSUITE_CREATE_EMPLOYEE
+  - key: NETSUITE_CREATE_INVOICE
+  - key: NETSUITE_CREATE_ITEM
+  - key: NETSUITE_CREATE_JOURNAL_ENTRY
+  - key: NETSUITE_CREATE_JWT_CLIENT_ASSERTION
+  - key: NETSUITE_CREATE_PURCHASE_ORDER
+  - key: NETSUITE_CREATE_RECORD
+  - key: NETSUITE_CREATE_SALES_ORDER
+  - key: NETSUITE_CREATE_VENDOR
+  - key: NETSUITE_CREATE_VENDOR_BILL
+  - key: NETSUITE_DELETE_CUSTOMER
+  - key: NETSUITE_DELETE_CUSTOMER_PAYMENT
+  - key: NETSUITE_DELETE_EMPLOYEE
+  - key: NETSUITE_DELETE_INVOICE
+  - key: NETSUITE_DELETE_ITEM
+  - key: NETSUITE_DELETE_ITEM_FULFILLMENT
+  - key: NETSUITE_DELETE_ITEM_RECEIPT
+  - key: NETSUITE_DELETE_JOURNAL_ENTRY
+  - key: NETSUITE_DELETE_PURCHASE_ORDER
+  - key: NETSUITE_DELETE_SALES_ORDER
+  - key: NETSUITE_DELETE_VENDOR_PAYMENT
+  - key: NETSUITE_EXECUTE_DATASET
+  - key: NETSUITE_GET_CUSTOMER
+  - key: NETSUITE_GET_CUSTOMER_PAYMENT
+  - key: NETSUITE_GET_DATACENTER_URLS
+  - key: NETSUITE_GET_EMPLOYEE
+  - key: NETSUITE_GET_GOVERNANCE_LIMITS
+  - key: NETSUITE_GET_INVOICE
+  - key: NETSUITE_GET_ITEM
+  - key: NETSUITE_GET_ITEM_FULFILLMENT
+  - key: NETSUITE_GET_ITEM_RECEIPT
+  - key: NETSUITE_GET_JOURNAL_ENTRY
+  - key: NETSUITE_GET_PURCHASE_ORDER
+  - key: NETSUITE_GET_RECORD_METADATA
+  - key: NETSUITE_GET_REFERENCE_SELECT_FIELD
+  - key: NETSUITE_GET_SALES_ORDER
+  - key: NETSUITE_GET_SERVER_TIME
+  - key: NETSUITE_GET_SUBLIST_COLLECTION
+  - key: NETSUITE_GET_SUBLIST_LINE
+  - key: NETSUITE_GET_SUBRECORD
+  - key: NETSUITE_GET_VENDOR
+  - key: NETSUITE_GET_VENDOR_BILL
+  - key: NETSUITE_GET_VENDOR_PAYMENT
+  - key: NETSUITE_LIST_CUSTOMER_PAYMENTS
+  - key: NETSUITE_LIST_DATASETS
+  - key: NETSUITE_LIST_EMPLOYEES
+  - key: NETSUITE_LIST_INTEGRATIONS
+  - key: NETSUITE_LIST_INVOICES
+  - key: NETSUITE_LIST_ITEM_FULFILLMENTS
+  - key: NETSUITE_LIST_ITEM_RECEIPTS
+  - key: NETSUITE_LIST_JOURNAL_ENTRIES
+  - key: NETSUITE_LIST_METADATA_CATALOG
+  - key: NETSUITE_LIST_PURCHASE_ORDERS
+  - key: NETSUITE_LIST_RECORDS
+  - key: NETSUITE_LIST_SALES_ORDERS
+  - key: NETSUITE_LIST_VENDOR_PAYMENTS
+  - key: NETSUITE_OAUTH2_GET_JWKS_KEYS
+  - key: NETSUITE_O_AUTH2_AUTHORIZE_ACCOUNT_DOMAIN
+  - key: NETSUITE_O_AUTH2_AUTHORIZE_SYSTEM_DOMAIN
+  - key: NETSUITE_O_AUTH2_LOGOUT
+  - key: NETSUITE_O_AUTH2_REVOKE_REFRESH_TOKEN
+  - key: NETSUITE_O_AUTH2_TOKEN_AUTHORIZATION_CODE
+  - key: NETSUITE_O_AUTH2_TOKEN_CLIENT_CREDENTIALS
+  - key: NETSUITE_O_AUTH2_TOKEN_REFRESH
+  - key: NETSUITE_RUN_SUITEQL_QUERY
+  - key: NETSUITE_TRANSFORM_RECORD
+  - key: NETSUITE_UPDATE_CUSTOMER
+  - key: NETSUITE_UPDATE_CUSTOMER_PAYMENT
+  - key: NETSUITE_UPDATE_EMPLOYEE
+  - key: NETSUITE_UPDATE_INVOICE
+  - key: NETSUITE_UPDATE_ITEM
+  - key: NETSUITE_UPDATE_ITEM_FULFILLMENT
+  - key: NETSUITE_UPDATE_ITEM_RECEIPT
+  - key: NETSUITE_UPDATE_JOURNAL_ENTRY
+  - key: NETSUITE_UPDATE_PURCHASE_ORDER
+  - key: NETSUITE_UPDATE_SALES_ORDER
+  - key: NETSUITE_UPDATE_VENDOR
+  - key: NETSUITE_UPDATE_VENDOR_BILL
+  - key: NETSUITE_UPDATE_VENDOR_PAYMENT
+  - key: NETSUITE_UPSERT_RECORD_BY_EXTERNAL_ID
+edges:
+- partner_name: Close
+  partner: close
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/netsuite/integrations/close
+  direction: third-party
+  category: CRM (Customer Relationship Management)
+  partner_url: https://www.close.com/?utm_source=Partner&utm_medium=Integration_Listing&utm_campaign=2025_Partnerships&utm_content=Home
+- partner_name: Google Sheets
+  partner: google-sheets
+  partner_match: name-exact
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/netsuite/integrations/google-sheets
+  direction: third-party
+  category: Google
+  partner_url: http://sheets.google.com/
+- partner_name: Mailchimp
+  partner: mailchimp
+  partner_match: name-exact
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/netsuite/integrations/mailchimp
+  direction: third-party
+  category: Marketing Automation
+  partner_url: https://mailchimp.com/
+- partner_name: HubSpot
+  partner: hubspot
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/netsuite/integrations/hubspot
+  direction: third-party
+  category: Marketing Automation
+  partner_url: http://www.hubspot.com/
+- partner_name: ActiveCampaign
+  partner: activecampaign
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/netsuite/integrations/activecampaign
+  direction: third-party
+  category: Marketing Automation
+  partner_url: https://www.activecampaign.com/?utm_source=unpaid_syndication_website&utm_medium=referral&utm_campaign=zapier_listing
+- partner_name: Google Forms
+  partner: google-forms
+  partner_match: name-exact
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/netsuite/integrations/google-forms
+  direction: third-party
+  category: Forms & Surveys
+  partner_url: http://google.com/
+- partner_name: Airtable
+  partner: airtable
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/netsuite/integrations/airtable
+  direction: third-party
+  category: Databases
+  partner_url: https://airtable.com/
+- partner_name: Zendesk
+  partner: zendesk
+  partner_match: name-exact
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/netsuite/integrations/zendesk
+  direction: third-party
+  category: Customer Support
+  partner_url: https://www.zendesk.com/
+- partner_name: Typeform
+  partner: typeform
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/netsuite/integrations/typeform
+  direction: third-party
+  category: Forms & Surveys
+  partner_url: https://www.typeform.com/signup?utm_medium=referral&utm_source=zapier&utm_campaign=zapier_integration&utm_content=marketplace
+- partner_name: Stripe
+  partner: stripe
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/netsuite/integrations/stripe
+  direction: third-party
+  category: Payment Processing
+  partner_url: https://stripe.com/
+- partner_name: LeadConnector
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/netsuite/integrations/leadconnector
+  direction: third-party
+  category: Marketing Automation
+  partner_url: https://www.leadconnectorhq.com/
+- partner_name: RingCentral
+  partner: ringcentral
+  partner_match: name-exact
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/netsuite/integrations/ringcentral
+  direction: third-party
+  category: Phone & SMS
+  partner_url: http://www.ringcentral.com/
+- partner_name: Intercom
+  partner: intercom
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/netsuite/integrations/intercom
+  direction: third-party
+  category: Customer Support
+  partner_url: https://www.intercom.com/welcome-to-intercom?utm_source=external-website&utm_medium=partner&utm_campaign=20220503_all_oc_all_global_gl_all_all_par_extmktplc&utm_term=zapier
+- partner_name: Slack
+  partner: slack
+  partner_match: name-exact
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/netsuite/integrations/slack
+  direction: third-party
+  category: Team Chat
+  partner_url: https://slack.com/
+- partner_name: Parseur
+  partner: parseur
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/netsuite/integrations/parseur
+  direction: third-party
+  category: Documents
+  partner_url: https://parseur.com/
+- partner_name: Kit
+  partner: convertkit
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/netsuite/integrations/kit
+  direction: third-party
+  category: Drip Emails
+  partner_url: https://kit.com/
+- partner_name: Kartra
+  partner: kartra
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/netsuite/integrations/kartra
+  direction: third-party
+  category: Marketing Automation
+  partner_url: https://home.kartra.com/
+- partner_name: Google Calendar
+  partner: google-calendar
+  partner_match: name-exact
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/netsuite/integrations/google-calendar
+  direction: third-party
+  category: Calendar
+  partner_url: https://calendar.google.com/
+- partner_name: Calendly
+  partner: calendly
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/netsuite/integrations/calendly
+  direction: third-party
+  category: Scheduling & Booking
+  partner_url: https://calendly.com/?utm_medium=partner&utm_source=zapier&utm_campaign=main_partner_page&utm_content=main_inbound_link
+- partner_name: Trello
+  partner: trello
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/netsuite/integrations/trello
+  direction: third-party
+  category: Project Management
+  partner_url: https://trello.com/
+- partner_name: Apollo
+  partner: apollo
+  partner_match: name-exact
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/netsuite/integrations/apollo
+  direction: third-party
+  category: Sales & CRM
+  partner_url: https://www.apollo.io/
+- partner_name: Woodpecker.co
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/netsuite/integrations/woodpecker
+  direction: third-party
+  category: Drip Emails
+  partner_url: http://www.woodpecker.co/
+- partner_name: Microsoft Outlook
+  partner: microsoft-outlook
+  partner_match: name-exact
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/netsuite/integrations/microsoft-outlook
+  direction: third-party
+  category: Calendar
+  partner_url: https://outlook.live.com/
+- partner_name: ClickFunnels Classic
+  partner: clickfunnels
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/netsuite/integrations/clickfunnels-classic
+  direction: third-party
+  category: Marketing Automation
+  partner_url: https://www.clickfunnels.com/
+- partner_name: Shopify
+  partner: shopify
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/netsuite/integrations/shopify
+  direction: third-party
+  category: eCommerce
+  partner_url: https://www.shopify.com/
+- partner_name: Velocity
+  partner: velocity
+  partner_match: name-exact
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/netsuite/integrations/velocity
+  direction: third-party
+  category: eCommerce
+  partner_url: https://velocity.medshift.com/
+- partner_name: Eventbrite
+  partner: eventbrite
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/netsuite/integrations/eventbrite
+  direction: third-party
+  category: Event Management
+  partner_url: https://eventbrite.com/
+- partner_name: Salesforce
+  partner: salesforce
+  partner_match: name-exact
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/netsuite/integrations/salesforce
+  direction: third-party
+  category: CRM (Customer Relationship Management)
+  partner_url: https://www.salesforce.com/
+- partner_name: Google Tasks
+  partner: google-tasks
+  partner_match: name-exact
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/netsuite/integrations/google-tasks
+  direction: third-party
+  category: Google
+  partner_url: https://google.com/
+- partner_name: Cognito Forms
+  partner: cognito-forms
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/netsuite/integrations/cognito-forms
+  direction: third-party
+  category: Forms & Surveys
+  partner_url: https://www.cognitoforms.com/
+- partner_name: bolt-financial
+  partner: bolt-financial
+  partner_match: domain
+  type: contract
+  channel: partner-built
+  relationship: processor-connection
+  direction: partner-built
+  evidence: https://github.com/api-evangelist/bolt-financial/blob/main/openapi/bolt-financial-transactions-api-openapi.yml
+  contract_reference:
+    repo: bolt-financial
+    spec_file: bolt-financial-transactions-api-openapi.yml
+    value: netsuite
+    property: schemas.merchant_platform
+    detected_by: detect-payment-method-edges.py
+    detected: '2026-10-12'
+- partner_name: cacheflow
+  partner: cacheflow
+  partner_match: domain
+  type: contract
+  channel: partner-built
+  relationship: processor-connection
+  direction: partner-built
+  evidence: https://github.com/api-evangelist/cacheflow/blob/main/openapi/cacheflow-self-service-api-openapi.yml
+  contract_reference:
+    repo: cacheflow
+    spec_file: cacheflow-self-service-api-openapi.yml
+    value: netsuite
+    property: schemas.ExternalSource.sourceType
+    detected_by: detect-payment-method-edges.py
+    detected: '2026-10-12'
+templates:
+- title: Create or update NetSuite records when new contacts are added in HubSpot
+  url: https://zapier.com/apps/hubspot/integrations/netsuite/1811253/create-or-update-netsuite-records-when-new-contacts-are-added-in-hubspot
+  apps:
+  - hubspot
+  - netsuite
+- title: Create new Klaviyo events from new NetSuite records
+  url: https://zapier.com/apps/klaviyo/integrations/netsuite/1814898/create-new-klaviyo-events-from-new-netsuite-records
+  apps:
+  - netsuite
+  - klaviyo
+- title: Create NetSuite records from completed CallRail phone calls
+  url: https://zapier.com/apps/callrail/integrations/netsuite/1810957/create-netsuite-records-from-completed-callrail-phone-calls
+  apps:
+  - callrail
+  - netsuite
+- title: Send new NetSuite records to Google Ads as offline conversions
+  url: https://zapier.com/apps/google-ads/integrations/netsuite/255623346/send-new-netsuite-records-to-google-ads-as-offline-conversions
+  apps:
+  - netsuite
+  - google-ads
+- title: Create items in monday.com from new records in NetSuite
+  url: https://zapier.com/apps/monday/integrations/netsuite/1810451/create-items-in-mondaycom-from-new-records-in-netsuite
+  apps:
+  - netsuite
+  - monday
+- title: Create or update NetSuite records for new Facebook Lead Ads leads
+  url: https://zapier.com/apps/facebook-lead-ads/integrations/netsuite/1810534/create-or-update-netsuite-records-for-new-facebook-lead-ads-leads
+  apps:
+  - facebook-lead-ads
+  - netsuite
+- title: Add new NetSuite records to update Mailchimp subscribers
+  url: https://zapier.com/apps/mailchimp/integrations/netsuite/1809973/add-new-netsuite-records-to-update-mailchimp-subscribers
+  apps:
+  - netsuite
+  - mailchimp
+- title: Create Harvest projects from new NetSuite records
+  url: https://zapier.com/apps/harvest/integrations/netsuite/1813046/create-harvest-projects-from-new-netsuite-records
+  apps:
+  - netsuite
+  - harvest
+- title: Create NetSuite records for new WooCommerce orders
+  url: https://zapier.com/apps/netsuite/integrations/woocommerce/1812123/create-netsuite-records-for-new-woocommerce-orders
+  apps:
+  - woocommerce
+  - netsuite
+- title: Create and update NetSuite contacts from new Tapt contacts
+  url: https://zapier.com/apps/netsuite/integrations/tapt/255638533/create-and-update-netsuite-contacts-from-new-tapt-contacts
+  apps:
+  - tapt
+  - netsuite
+- title: Create new Microsoft Outlook events from new NetSuite records
+  url: https://zapier.com/apps/microsoft-outlook/integrations/netsuite/1812715/create-new-microsoft-outlook-events-from-new-netsuite-records
+  apps:
+  - netsuite
+  - microsoft-outlook
+- title: Create contacts in Front for new records in NetSuite
+  url: https://zapier.com/apps/front-app/integrations/netsuite/1813727/create-contacts-in-front-for-new-records-in-netsuite
+  apps:
+  - netsuite
+  - front-app
+template_total: 3895
