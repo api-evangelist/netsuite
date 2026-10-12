@@ -489,7 +489,6 @@
   arazzo: null
 - slug: netsuite-boomi
   label: Boomi
-  partner: boomi
   partner_name: Boomi
   category: Standard Application
   type: marketplace
@@ -502,7 +501,6 @@
   arazzo: null
 - slug: netsuite-avalara
   label: Avalara
-  partner: avalara
   partner_name: Avalara
   category: Standard Application
   type: marketplace
@@ -527,7 +525,6 @@
   arazzo: null
 - slug: netsuite-laurel
   label: Laurel
-  partner: laurel
   partner_name: Laurel
   category: AI Application
   type: marketplace
@@ -827,7 +824,6 @@
   arazzo: null
 - slug: netsuite-celigo
   label: Celigo
-  partner: celigo
   partner_name: Celigo
   category: Standard Application
   type: marketplace
@@ -1184,7 +1180,6 @@
   arazzo: null
 - slug: netsuite-numeral
   label: Numeral
-  partner: numeral
   partner_name: Numeral
   category: Standard Application
   type: marketplace
@@ -1209,7 +1204,6 @@
   arazzo: null
 - slug: netsuite-adyen
   label: Adyen
-  partner: adyen
   partner_name: Adyen
   category: Standard Application
   type: marketplace
@@ -1258,7 +1252,6 @@
   arazzo: null
 - slug: netsuite-ottimate
   label: Ottimate
-  partner: ottimate
   partner_name: Ottimate
   category: AI Application
   type: marketplace
@@ -1379,7 +1372,6 @@
   arazzo: null
 - slug: netsuite-customers-bank
   label: Customers Bank
-  partner: customers-bank
   partner_name: Customers Bank
   category: Standard Application
   type: marketplace
@@ -1476,7 +1468,6 @@
   arazzo: null
 - slug: netsuite-ledge
   label: Ledge
-  partner: ledge
   partner_name: Ledge
   category: AI Application
   type: marketplace
