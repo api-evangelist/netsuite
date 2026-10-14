@@ -1526,3 +1526,27 @@
   relationship: platform-app
   status: not-a-workflow
   arazzo: null
+- slug: netsuite-hightouch
+  label: Hightouch
+  partner: hightouch
+  partner_name: Hightouch
+  type: coverage
+  marketplace: coverage
+  channel: partner-built
+  evidence: https://hightouch.com/docs/destinations/netsuite-rest
+  source: edge
+  relationship: connector-coverage
+  status: not-a-workflow
+  arazzo: null
+- slug: netsuite-census
+  label: Census
+  partner: getcensus
+  partner_name: Census
+  type: coverage
+  marketplace: coverage
+  channel: partner-built
+  evidence: https://fivetran.com/docs/activations/destinations/available-destinations/netsuite
+  source: edge
+  relationship: connector-coverage
+  status: not-a-workflow
+  arazzo: null
