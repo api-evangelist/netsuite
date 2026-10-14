@@ -12,6 +12,7 @@ checked:
 - https://n8n.io/integrations/netsuite/
 - https://www.suiteapp.com/
 - https://zapier.com/apps/netsuite/integrations
+- servicetitan/integrations/servicetitan-integration-edges.yml
 summary: null
 marketplace_apps:
 - marketplace: zapier
@@ -1994,6 +1995,23 @@ edges:
   detected: '2026-10-14'
   detected_by: mirror-platform-listings.py
   category: Integrations
+- partner_name: ServiceTitan (own)
+  partner: servicetitan
+  partner_match: mirror
+  mirror_match: domain
+  type: marketplace
+  relationship: platform-app
+  direction: third-party
+  channel: partner-built
+  marketplace: own
+  evidence: https://marketplace.servicetitan.com/partner/oracle-netsuite
+  mirror_of: servicetitan/integrations/servicetitan-integration-edges.yml
+  apps:
+  - Oracle NetSuite
+  listing_count: 1
+  detected: '2026-10-14'
+  detected_by: mirror-platform-listings.py
+  category: Accounting & Tax
 templates:
 - title: Create or update NetSuite records when new contacts are added in HubSpot
   url: https://zapier.com/apps/hubspot/integrations/netsuite/1811253/create-or-update-netsuite-records-when-new-contacts-are-added-in-hubspot
