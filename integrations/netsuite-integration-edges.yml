@@ -4,6 +4,7 @@ source:
 - https://zapier.com/apps/netsuite/integrations
 - https://composio.dev/toolkits/netsuite
 checked:
+- docusign/integrations/docusign-integration-edges.yml
 - https://composio.dev/toolkits/netsuite
 - https://fivetran.com/docs/activations/destinations/available-destinations/netsuite
 - https://hightouch.com/docs/destinations/netsuite-rest
@@ -1976,6 +1977,23 @@ edges:
       - update or create
   detected_by: sweep-cdp.py
   first_seen: '2026-10-14'
+- partner_name: Docusign (partner-store)
+  partner: docusign
+  partner_match: mirror
+  mirror_match: domain+verified
+  type: marketplace
+  relationship: platform-app
+  direction: third-party
+  channel: partner-built
+  marketplace: partner-store
+  evidence: https://www.suiteapp.com/Docusign-for-NetSuite
+  mirror_of: docusign/integrations/docusign-integration-edges.yml
+  apps:
+  - eSignature for NetSuite
+  listing_count: 1
+  detected: '2026-10-14'
+  detected_by: mirror-platform-listings.py
+  category: Integrations
 templates:
 - title: Create or update NetSuite records when new contacts are added in HubSpot
   url: https://zapier.com/apps/hubspot/integrations/netsuite/1811253/create-or-update-netsuite-records-when-new-contacts-are-added-in-hubspot
