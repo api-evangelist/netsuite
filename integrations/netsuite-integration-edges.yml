@@ -10,6 +10,9 @@ checked:
 - https://hightouch.com/docs/destinations/netsuite-rest
 - https://monid.ai/tools/netsuite
 - https://n8n.io/integrations/netsuite/
+- https://www.gs1.org/services/gdsn/certified-data-pools-list
+- https://www.gs1us.org/services/find-gs1-us-solution-partner/profiles
+- https://www.spscommerce.com/partner-community/directory/
 - https://www.suiteapp.com/
 - https://zapier.com/apps/netsuite/integrations
 - servicetitan/integrations/servicetitan-integration-edges.yml
@@ -2012,6 +2015,32 @@ edges:
   detected: '2026-10-14'
   detected_by: mirror-platform-listings.py
   category: Accounting & Tax
+- partner_name: SPS Commerce
+  partner: sps-commerce
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: third-party
+  app: NetSuite
+  evidence: https://www.spscommerce.com/partner-community/directory/
+  category: Software Provider
+  contract_reference:
+    register: SPS Commerce partner community directory
+    spec_file: null
+    role: sps-integration-partner
+    registered_name: NetSuite
+    website: http://www.netsuite.com/portal/home.shtml
+    matched_domain: netsuite.com
+    matched_by: domain
+    business_types:
+    - Software Provider
+    signal_note: 'participation only: a directory listing, never a count'
+    detected_by: sweep-consumer-goods.py
+    detected: '2026-10-15'
+  detected_by: sweep-consumer-goods.py
+  first_seen: '2026-10-15'
 templates:
 - title: Create or update NetSuite records when new contacts are added in HubSpot
   url: https://zapier.com/apps/hubspot/integrations/netsuite/1811253/create-or-update-netsuite-records-when-new-contacts-are-added-in-hubspot
