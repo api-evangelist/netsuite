@@ -1625,7 +1625,7 @@
     app_slug: netsuite
     beta: false
     builder: unknown (not in the directory record)
-  status: pending-partner-spec
+  status: not-a-workflow
   arazzo: null
 - slug: netsuite-pipedream
   label: Pipedream
@@ -1651,5 +1651,5 @@
     actions: true
     sources: false
     builder: Pipedream repo (component)
-  status: pending-partner-spec
+  status: not-a-workflow
   arazzo: null
