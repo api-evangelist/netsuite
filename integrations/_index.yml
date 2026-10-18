@@ -1653,3 +1653,64 @@
     builder: Pipedream repo (component)
   status: not-a-workflow
   arazzo: null
+- slug: netsuite-fivetran
+  label: Fivetran
+  partner: fivetran
+  partner_name: Fivetran
+  type: marketplace
+  marketplace: fivetran-connectors
+  channel: elt-connector
+  evidence: https://fivetran.com/docs/connectors/applications/netsuite-suiteanalytics
+  source: edge
+  relationship: ipaas-bridge
+  contract_reference:
+    register: Fivetran connectors (fivetran.com/docs/connectors, docs-sitemap.xml + Partner-Built program)
+    spec_file: null
+    role: elt-connector:fivetran
+    registered_name: NetSuite SuiteAnalytics
+    matched_domain: netsuite.com
+    matched_by: domain
+    detected_by: sweep-data-integration.py
+    detected: '2026-10-18'
+    signal_note: one edge per (provider, platform); connectors, streams, packages and usage are context, never read
+    connector_paths:
+    - connectors/applications/netsuite-suiteanalytics
+    - connectors/applications/netsuite-suiteprojects-pro
+    vendor_link: http://www.netsuite.com/portal/platform/developer/suiteanalytics.shtml
+    builder: Fivetran
+  status: pending-partner-spec
+  arazzo: null
+- slug: netsuite-meltano
+  label: Meltano
+  partner: meltano
+  partner_name: Meltano
+  type: marketplace
+  marketplace: meltano-hub
+  channel: elt-connector
+  evidence: https://hub.meltano.com/extractors/tap-netsuite--airbyte
+  source: edge
+  relationship: ipaas-bridge
+  contract_reference:
+    register: Meltano Hub (github.com/meltano/hub _data/meltano extractors + loaders)
+    spec_file: null
+    role: elt-connector:meltano-hub
+    registered_name: NetSuite
+    matched_domain: netsuite.com
+    matched_by: domain
+    detected_by: sweep-data-integration.py
+    detected: '2026-10-18'
+    signal_note: one edge per (provider, platform); connectors, streams, packages and usage are context, never read
+    plugins:
+    - tap-netsuite--airbyte
+    - tap-netsuite--gthesheep
+    - tap-netsuite--hotgluexyz
+    - tap-netsuite--sehnem
+    maintenance_status:
+    - active
+    - beta
+    quality:
+    - bronze
+    - silver
+    builder: 'community (Meltano Hub variant maintainers: airbyte, gthesheep, hotgluexyz, sehnem)'
+  status: pending-partner-spec
+  arazzo: null
