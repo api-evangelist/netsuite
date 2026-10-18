@@ -1678,7 +1678,7 @@
     - connectors/applications/netsuite-suiteprojects-pro
     vendor_link: http://www.netsuite.com/portal/platform/developer/suiteanalytics.shtml
     builder: Fivetran
-  status: pending-partner-spec
+  status: not-a-workflow
   arazzo: null
 - slug: netsuite-meltano
   label: Meltano
@@ -1712,5 +1712,5 @@
     - bronze
     - silver
     builder: 'community (Meltano Hub variant maintainers: airbyte, gthesheep, hotgluexyz, sehnem)'
-  status: pending-partner-spec
+  status: not-a-workflow
   arazzo: null
