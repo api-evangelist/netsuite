@@ -403,6 +403,143 @@
     detected: '2026-10-12'
   status: not-a-workflow
   arazzo: null
+- slug: netsuite-docusign-partner-store
+  label: Docusign (partner-store)
+  partner: docusign
+  partner_name: Docusign (partner-store)
+  category: Integrations
+  type: marketplace
+  marketplace: partner-store
+  channel: partner-built
+  evidence: https://www.suiteapp.com/Docusign-for-NetSuite
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: netsuite-servicetitan-own
+  label: ServiceTitan (own)
+  partner: servicetitan
+  partner_name: ServiceTitan (own)
+  category: Accounting & Tax
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://marketplace.servicetitan.com/partner/oracle-netsuite
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: netsuite-hightouch
+  label: Hightouch
+  partner: hightouch
+  partner_name: Hightouch
+  type: coverage
+  marketplace: coverage
+  channel: partner-built
+  evidence: https://hightouch.com/docs/destinations/netsuite-rest
+  source: edge
+  relationship: connector-coverage
+  status: not-a-workflow
+  arazzo: null
+- slug: netsuite-census
+  label: Census
+  partner: getcensus
+  partner_name: Census
+  type: coverage
+  marketplace: coverage
+  channel: partner-built
+  evidence: https://fivetran.com/docs/activations/destinations/available-destinations/netsuite
+  source: edge
+  relationship: connector-coverage
+  status: not-a-workflow
+  arazzo: null
+- slug: netsuite-sps-commerce
+  label: SPS Commerce
+  partner: sps-commerce
+  partner_name: SPS Commerce
+  category: Software Provider
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.spscommerce.com/partner-community/directory/
+  source: edge
+  relationship: platform-app
+  contract_reference:
+    register: SPS Commerce partner community directory
+    spec_file: null
+    role: sps-integration-partner
+    registered_name: NetSuite
+    website: http://www.netsuite.com/portal/home.shtml
+    matched_domain: netsuite.com
+    matched_by: domain
+    business_types:
+    - Software Provider
+    signal_note: 'participation only: a directory listing, never a count'
+    detected_by: sweep-consumer-goods.py
+    detected: '2026-10-19'
+  status: not-a-workflow
+  arazzo: null
+- slug: netsuite-fivetran
+  label: Fivetran
+  partner: fivetran
+  partner_name: Fivetran
+  type: marketplace
+  marketplace: fivetran-connectors
+  channel: elt-connector
+  evidence: https://fivetran.com/docs/connectors/applications/netsuite-suiteanalytics
+  source: edge
+  relationship: ipaas-bridge
+  contract_reference:
+    register: Fivetran connectors (fivetran.com/docs/connectors, docs-sitemap.xml + Partner-Built program)
+    spec_file: null
+    role: elt-connector:fivetran
+    registered_name: NetSuite SuiteAnalytics
+    matched_domain: netsuite.com
+    matched_by: domain
+    detected_by: sweep-data-integration.py
+    detected: '2026-10-18'
+    signal_note: one edge per (provider, platform); connectors, streams, packages and usage are context, never read
+    connector_paths:
+    - connectors/applications/netsuite-suiteanalytics
+    - connectors/applications/netsuite-suiteprojects-pro
+    vendor_link: http://www.netsuite.com/portal/platform/developer/suiteanalytics.shtml
+    builder: Fivetran
+  status: not-a-workflow
+  arazzo: null
+- slug: netsuite-meltano
+  label: Meltano
+  partner: meltano
+  partner_name: Meltano
+  type: marketplace
+  marketplace: meltano-hub
+  channel: elt-connector
+  evidence: https://hub.meltano.com/extractors/tap-netsuite--airbyte
+  source: edge
+  relationship: ipaas-bridge
+  contract_reference:
+    register: Meltano Hub (github.com/meltano/hub _data/meltano extractors + loaders)
+    spec_file: null
+    role: elt-connector:meltano-hub
+    registered_name: NetSuite
+    matched_domain: netsuite.com
+    matched_by: domain
+    detected_by: sweep-data-integration.py
+    detected: '2026-10-18'
+    signal_note: one edge per (provider, platform); connectors, streams, packages and usage are context, never read
+    plugins:
+    - tap-netsuite--airbyte
+    - tap-netsuite--gthesheep
+    - tap-netsuite--hotgluexyz
+    - tap-netsuite--sehnem
+    maintenance_status:
+    - active
+    - beta
+    quality:
+    - bronze
+    - silver
+    builder: 'community (Meltano Hub variant maintainers: airbyte, gthesheep, hotgluexyz, sehnem)'
+  status: not-a-workflow
+  arazzo: null
 - slug: netsuite-suitepos
   label: SuitePos
   partner_name: SuitePos
@@ -1526,82 +1663,6 @@
   relationship: platform-app
   status: not-a-workflow
   arazzo: null
-- slug: netsuite-hightouch
-  label: Hightouch
-  partner: hightouch
-  partner_name: Hightouch
-  type: coverage
-  marketplace: coverage
-  channel: partner-built
-  evidence: https://hightouch.com/docs/destinations/netsuite-rest
-  source: edge
-  relationship: connector-coverage
-  status: not-a-workflow
-  arazzo: null
-- slug: netsuite-census
-  label: Census
-  partner: getcensus
-  partner_name: Census
-  type: coverage
-  marketplace: coverage
-  channel: partner-built
-  evidence: https://fivetran.com/docs/activations/destinations/available-destinations/netsuite
-  source: edge
-  relationship: connector-coverage
-  status: not-a-workflow
-  arazzo: null
-- slug: netsuite-docusign-partner-store
-  label: Docusign (partner-store)
-  partner: docusign
-  partner_name: Docusign (partner-store)
-  category: Integrations
-  type: marketplace
-  marketplace: partner-store
-  channel: partner-built
-  evidence: https://www.suiteapp.com/Docusign-for-NetSuite
-  source: edge
-  relationship: platform-app
-  status: not-a-workflow
-  arazzo: null
-- slug: netsuite-servicetitan-own
-  label: ServiceTitan (own)
-  partner: servicetitan
-  partner_name: ServiceTitan (own)
-  category: Accounting & Tax
-  type: marketplace
-  marketplace: own
-  channel: partner-built
-  evidence: https://marketplace.servicetitan.com/partner/oracle-netsuite
-  source: edge
-  relationship: platform-app
-  status: not-a-workflow
-  arazzo: null
-- slug: netsuite-sps-commerce
-  label: SPS Commerce
-  partner: sps-commerce
-  partner_name: SPS Commerce
-  category: Software Provider
-  type: marketplace
-  marketplace: own
-  channel: partner-built
-  evidence: https://www.spscommerce.com/partner-community/directory/
-  source: edge
-  relationship: platform-app
-  contract_reference:
-    register: SPS Commerce partner community directory
-    spec_file: null
-    role: sps-integration-partner
-    registered_name: NetSuite
-    website: http://www.netsuite.com/portal/home.shtml
-    matched_domain: netsuite.com
-    matched_by: domain
-    business_types:
-    - Software Provider
-    signal_note: 'participation only: a directory listing, never a count'
-    detected_by: sweep-consumer-goods.py
-    detected: '2026-10-15'
-  status: not-a-workflow
-  arazzo: null
 - slug: netsuite-zapier
   label: Zapier
   partner: zapier
@@ -1634,7 +1695,7 @@
   type: marketplace
   marketplace: pipedream-components
   channel: open-source-node
-  evidence: https://github.com/PipedreamHQ/pipedream/tree/94800dd6de6640b942c65ea7ee655f71ac56d438/components/netsuite
+  evidence: https://github.com/PipedreamHQ/pipedream/tree/d5872355ef27b4efa769f05352f2820c299a456e/components/netsuite
   source: edge
   relationship: ipaas-bridge
   contract_reference:
@@ -1651,66 +1712,5 @@
     actions: true
     sources: false
     builder: Pipedream repo (component)
-  status: not-a-workflow
-  arazzo: null
-- slug: netsuite-fivetran
-  label: Fivetran
-  partner: fivetran
-  partner_name: Fivetran
-  type: marketplace
-  marketplace: fivetran-connectors
-  channel: elt-connector
-  evidence: https://fivetran.com/docs/connectors/applications/netsuite-suiteanalytics
-  source: edge
-  relationship: ipaas-bridge
-  contract_reference:
-    register: Fivetran connectors (fivetran.com/docs/connectors, docs-sitemap.xml + Partner-Built program)
-    spec_file: null
-    role: elt-connector:fivetran
-    registered_name: NetSuite SuiteAnalytics
-    matched_domain: netsuite.com
-    matched_by: domain
-    detected_by: sweep-data-integration.py
-    detected: '2026-10-18'
-    signal_note: one edge per (provider, platform); connectors, streams, packages and usage are context, never read
-    connector_paths:
-    - connectors/applications/netsuite-suiteanalytics
-    - connectors/applications/netsuite-suiteprojects-pro
-    vendor_link: http://www.netsuite.com/portal/platform/developer/suiteanalytics.shtml
-    builder: Fivetran
-  status: not-a-workflow
-  arazzo: null
-- slug: netsuite-meltano
-  label: Meltano
-  partner: meltano
-  partner_name: Meltano
-  type: marketplace
-  marketplace: meltano-hub
-  channel: elt-connector
-  evidence: https://hub.meltano.com/extractors/tap-netsuite--airbyte
-  source: edge
-  relationship: ipaas-bridge
-  contract_reference:
-    register: Meltano Hub (github.com/meltano/hub _data/meltano extractors + loaders)
-    spec_file: null
-    role: elt-connector:meltano-hub
-    registered_name: NetSuite
-    matched_domain: netsuite.com
-    matched_by: domain
-    detected_by: sweep-data-integration.py
-    detected: '2026-10-18'
-    signal_note: one edge per (provider, platform); connectors, streams, packages and usage are context, never read
-    plugins:
-    - tap-netsuite--airbyte
-    - tap-netsuite--gthesheep
-    - tap-netsuite--hotgluexyz
-    - tap-netsuite--sehnem
-    maintenance_status:
-    - active
-    - beta
-    quality:
-    - bronze
-    - silver
-    builder: 'community (Meltano Hub variant maintainers: airbyte, gthesheep, hotgluexyz, sehnem)'
   status: not-a-workflow
   arazzo: null
