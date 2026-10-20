@@ -1714,3 +1714,36 @@
     builder: Pipedream repo (component)
   status: not-a-workflow
   arazzo: null
+- slug: netsuite-eu-cloud-code-of-conduct-scope-europe-monitoring-body
+  label: EU Cloud Code of Conduct (SCOPE Europe monitoring body)
+  partner_name: EU Cloud Code of Conduct (SCOPE Europe monitoring body)
+  category: Cloud data-protection assurance
+  type: register
+  channel: standard-directory
+  evidence: https://eucoc.cloud/en/public-register/list-of-adherent-services
+  source: edge
+  relationship: standard-participant
+  contract_reference:
+    register: EU Cloud Code of Conduct public register (eucoc.cloud, list of adherent services)
+    spec_file: null
+    standard: EU Cloud CoC
+    role: eu-cloud-coc-adherent
+    registered_name: Oracle NetSuite
+    register_id: 2021LVL02SCOPE218
+    service_url: https://www.netsuite.com
+    matched_domain: netsuite.com
+    matched_by: domain
+    identity_source: the service URL on the register (filed by the adherent, verified by the monitoring body)
+    level_of_compliance: 2
+    latest_assessment: '2025-12-10'
+    due_date: '2026-11-14'
+    certified_products:
+    - product: EU Cloud CoC verified declaration of adherence
+      lapsed: false
+      level: 2
+    signal_note: 'one certified product: adherence verified by the accredited monitoring body (GDPR Art. 41); lapsed
+      when the due date has passed; level is context; services never counted'
+    detected_by: sweep-compliance-assurance.py
+    detected: '2026-10-20'
+  status: not-a-workflow
+  arazzo: null

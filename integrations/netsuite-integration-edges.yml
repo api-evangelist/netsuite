@@ -5,7 +5,9 @@ source:
 - https://composio.dev/toolkits/netsuite
 checked:
 - docusign/integrations/docusign-integration-edges.yml
+- https://cloudsecurityalliance.org/star/registry
 - https://composio.dev/toolkits/netsuite
+- https://eucoc.cloud/en/public-register/list-of-adherent-services
 - https://fivetran.com/docs-sitemap.xml
 - https://fivetran.com/docs/activations/destinations/available-destinations/netsuite
 - https://fivetran.com/docs/connectors/partner-built-program
@@ -2159,6 +2161,39 @@ edges:
     builder: Pipedream repo (component)
   detected_by: sweep-workflow-automation.py
   first_seen: '2026-10-15'
+- partner_name: EU Cloud Code of Conduct (SCOPE Europe monitoring body)
+  partner: null
+  partner_match: register
+  type: register
+  channel: standard-directory
+  relationship: standard-participant
+  direction: partner-built
+  evidence: https://eucoc.cloud/en/public-register/list-of-adherent-services
+  category: Cloud data-protection assurance
+  contract_reference:
+    register: EU Cloud Code of Conduct public register (eucoc.cloud, list of adherent services)
+    spec_file: null
+    standard: EU Cloud CoC
+    role: eu-cloud-coc-adherent
+    registered_name: Oracle NetSuite
+    register_id: 2021LVL02SCOPE218
+    service_url: https://www.netsuite.com
+    matched_domain: netsuite.com
+    matched_by: domain
+    identity_source: the service URL on the register (filed by the adherent, verified by the monitoring body)
+    level_of_compliance: 2
+    latest_assessment: '2025-12-10'
+    due_date: '2026-11-14'
+    certified_products:
+    - product: EU Cloud CoC verified declaration of adherence
+      lapsed: false
+      level: 2
+    signal_note: 'one certified product: adherence verified by the accredited monitoring body (GDPR Art. 41); lapsed
+      when the due date has passed; level is context; services never counted'
+    detected_by: sweep-compliance-assurance.py
+    detected: '2026-10-20'
+  detected_by: sweep-compliance-assurance.py
+  first_seen: '2026-10-20'
 templates:
 - title: Create or update NetSuite records when new contacts are added in HubSpot
   url: https://zapier.com/apps/hubspot/integrations/netsuite/1811253/create-or-update-netsuite-records-when-new-contacts-are-added-in-hubspot
