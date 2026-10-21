@@ -25,6 +25,9 @@ checked:
 - https://zapier.com/api/v4/apps/
 - https://zapier.com/apps/netsuite/integrations
 - servicetitan/integrations/servicetitan-integration-edges.yml
+- https://advertising.amazon.com/partners/directory
+- https://sellercentral.amazon.com/gspn
+- https://sellercentral.amazon.com/selling-partner-appstore
 summary: null
 marketplace_apps:
 - marketplace: zapier
@@ -2225,6 +2228,21 @@ edges:
   direction: third-party
   category: Call Tracking
   partner_url: https://www.callrail.com/?utm_medium=strategicpartner&utm_source=zapier&utm_campaign=app_listing&utm_content=app_listing
+- partner_name: Amazon Selling Partner Appstore
+  partner: amazon-seller-central
+  partner_match: mirror
+  mirror_match: domain
+  type: marketplace
+  relationship: platform-app
+  direction: third-party
+  channel: partner-built
+  marketplace: own
+  evidence: https://sellercentral.amazon.com/selling-partner-appstore/dp/amzn1.sellerapps.app.bc3f1973-d71d-43f6-afca-414c0c3b1b95
+  mirror_of: amazon-seller-central/integrations/amazon-seller-central-integration-edges.yml
+  apps:
+  - NetSuite Connector
+  detected: '2026-10-21'
+  detected_by: sweep-amazon-sp-api-appstore.py
 templates:
 - title: Create or update NetSuite records when new contacts are added in HubSpot
   url: https://zapier.com/apps/hubspot/integrations/netsuite/1811253/create-or-update-netsuite-records-when-new-contacts-are-added-in-hubspot
