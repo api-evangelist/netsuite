@@ -1,4 +1,4 @@
-# NetSuite (netsuite)\n\nAPI and integration profile for NetSuite.
+# Oracle NetSuite
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -63,3 +63,97 @@
 >
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
+
+Oracle NetSuite is a cloud-based business management suite that combines ERP, financials, CRM, inventory, supply chain, ecommerce, and human capital management into a single platform for mid-market and enterprise companies. NetSuite's SuiteCloud platform exposes both REST web services (SuiteTalk REST, with OpenAPI 3.0 metadata, SuiteQL queries, and CRUD on standard and custom records) and SOAP web services (SuiteTalk SOAP), plus the RESTlets framework for exposing custom server-side SuiteScript as REST endpoints.
+
+**Areas:** ERP · CRM · Finance · Accounting · Inventory · E-Commerce · Business Management · Cloud ERP
+
+## Oracle NetSuite on APIs.io
+
+Everything profiled for Oracle NetSuite is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/netsuite/](https://apis.io/providers/netsuite/)** — or go straight to one of the APIs or properties below.
+
+### APIs (5)
+
+- [NetSuite SuiteTalk REST Web Services](https://apis.io/apis/netsuite/suitetalk-rest/) — REST-based interface to NetSuite business objects as JSON resources with CRUD operations, SuiteQL high-performance queries, and an OpenAPI 3.0 definition…
+- [NetSuite SuiteTalk SOAP Web Services](https://apis.io/apis/netsuite/suitetalk-soap/) — Long-standing SOAP-based integration API to NetSuite records and business logic, suitable for bulk operations, custom records, and legacy ERP integration…
+- [NetSuite RESTlets](https://apis.io/apis/netsuite/restlets/) — Framework for exposing custom server-side SuiteScript as REST endpoints hosted in NetSuite, enabling tailored integrations and custom business logic over HTTP.
+- [Oracle NetSuite SuiteTalk REST Record API](https://apis.io/apis/netsuite/suitetalk-rest-record-api/) — REST Web Services API for creating, reading, updating, and deleting NetSuite records such as customers, vendors, sales orders, invoices, items, and journal…
+- [Oracle NetSuite SuiteQL Query API](https://apis.io/apis/netsuite/suiteql-query-api/) — REST endpoint for executing SuiteQL (SQL-like) queries against NetSuite records and transactions for reporting and integration use cases. Returns paginated…
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### GraphQL (2)
+
+GraphQL schemas.
+
+- [Moved to /providers/netsuite/](https://apis.io/graphqls/netsuite/netsuite-graphql/)
+- [Moved to /providers/netsuite/](https://apis.io/graphqls/netsuite/oracle-netsuite-graphql/)
+
+#### Security (1)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Netsuite Domain Security](https://apis.io/security/netsuite/netsuite-domain-security/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.netsuite.com/)
+- [Documentation](https://docs.oracle.com/en/cloud/saas/netsuite/)
+- [GitHub](https://github.com/netsuite)
+
+## API Evangelist rating
+
+**Kin Score 12.5** — emerging · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 71.4 |
+| Contract quality | 0.0 |
+| Contract governance | 0.0 |
+| Operational transparency | 2.6 |
+| Developer ergonomics | 19.0 |
+| Access clarity | 13.2 |
+
+**Agent readiness 0.0** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 5.9** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/netsuite/](https://apis.io/providers/netsuite/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Oracle NetSuite: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/netsuite/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
